@@ -7,7 +7,7 @@ import HomePage from './HomePage'
 class Main extends Component {
   render() {
     return (
-      <div className="main">
+      <div className="main" style={styles.main}>
         <Switch>
           <Route exact path='/interviews' component={InterviewList} />
           <Route exact path='/companies' component={CompanyList} />
@@ -15,6 +15,13 @@ class Main extends Component {
         </Switch>
       </div>
     )
+  }
+}
+
+const styles = {
+  main: {
+    border: "1px solid black",
+    minHeight: '400px'
   }
 }
 
