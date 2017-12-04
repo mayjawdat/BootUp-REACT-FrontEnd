@@ -13,6 +13,7 @@ class CompanyList extends Component {
   componentDidMount() {
     axios.get('/api/companies')
       .then(({data}) => this.setState({companies: data}))
+      //console.log(this.state.companies)
   }
 
   render() {
