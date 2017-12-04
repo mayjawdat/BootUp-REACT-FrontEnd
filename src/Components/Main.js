@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import InterviewList from './Interviews/InterviewList'
 import CompanyList from './Companies/CompanyList'
+// import CompanyDetail from './Companies/CompanyDetail'
 import HomePage from './HomePage'
 import InterviewForm from './Interviews/InterviewForm'
 
