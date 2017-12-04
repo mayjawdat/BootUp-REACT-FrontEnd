@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import InterviewList from './InterviewList'
 import CompanyList from './CompanyList'
 import HomePage from './HomePage'
+import InterviewNew from './InterviewNew'
 
 class Main extends Component {
   render() {
@@ -10,6 +11,7 @@ class Main extends Component {
       <div className="main" style={styles.main}>
         <Switch>
           <Route exact path='/interviews' component={InterviewList} />
+          <Route exact path='/interviews/new' component={InterviewNew} />
           <Route exact path='/companies' component={CompanyList} />
           <Route exact path='/' component={HomePage} />
         </Switch>
