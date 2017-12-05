@@ -21,6 +21,21 @@ class CompanySearchForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault()
 
+    axios.post('http://localhost:3001/api/searches',
+    {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+}
+    }
+    )
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
   }
   render() {
     var companyName = this.state.companyName;
