@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import InterviewList from './Interviews/InterviewList'
 import CompanyList from './Companies/CompanyList'
-// import CompanyDetail from './Companies/CompanyDetail'
 import HomePage from './HomePage'
 import InterviewForm from './Interviews/InterviewForm'
 import CompanySearchForm from './Companies/CompanySearchForm'
+import UserProfile from './Users/UserProfile'
+
 
 class Main extends Component {
   render() {
@@ -17,6 +18,8 @@ class Main extends Component {
           <Route exact path='/companies' component={CompanyList} />
           <Route exact path='/' component={HomePage} />
           <Route exact path='/search' component={CompanySearchForm} />
+          <Route exact path='/users/:id' component={UserProfile} />
+
         </Switch>
       </div>
     )

@@ -1,9 +1,13 @@
 import React from 'react';
 
-const CompanyListItem = ({company}) => {
+const onCompanySelectCheck = (company) => {
+  console.log('yes poop', company.name)
+}
+
+const CompanyListItem = ({company, onCompanySelect}) => {
   return (
     <div>
-      <li>{company.name}</li>
+      <li onClick={() => onCompanySelect(company)}>{company.name}</li>
     </div>
   );
 };
