@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import InterviewItemDetail from './InterviewItemDetail'
 import InterviewListItem from './InterviewListItem'
 
 class InterviewList extends Component {
@@ -8,7 +9,8 @@ class InterviewList extends Component {
     super(props)
 
     this.state = {
-      interviews: []
+      interviews: [],
+      selectedInterview: 'Loading...'
     }
   }
 
@@ -20,6 +22,7 @@ class InterviewList extends Component {
   interviewItems() {
     return this.state.interviews.map(interview => (
       <InterviewListItem
+      onInterviewSelect = {selectedInterview => this.setState({selectedInterview})}
       key={interview.id} 
       interview={interview} />
     ))
@@ -29,6 +32,7 @@ class InterviewList extends Component {
     return (
       <div className="interview-list">
         <h2>Interview List</h2>
+        <InterviewItemDetail selectedInterview = {this.state.selectedInterview}/>
         <ul>
           {this.interviewItems()}
         </ul>
