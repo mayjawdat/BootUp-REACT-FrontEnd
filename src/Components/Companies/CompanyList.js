@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import CompanyItemDetail from './CompanyItemDetail'
 import CompanyListItem from './CompanyListItem'
+import './Company.css';
 
 class CompanyList extends Component {
   constructor(props) {
@@ -53,9 +54,9 @@ export default CompanyList
 // const VideoList = (props) => {
 //   const videoItems = props.videos.map((video) => {
 //     return (
-//       <VideoListItem  
+//       <VideoListItem
 //         onVideoSelect = {props.onVideoSelect}
-//         key = {video.etag} 
+//         key = {video.etag}
 //         video = {video} />
 //     )
 //   });
