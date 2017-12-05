@@ -1,9 +1,9 @@
 import React from 'react';
 
-const InterviewListItem = ({interview}) => {
+const InterviewListItem = ({interview, onInterviewSelect}) => {
     return (
         <div>
-            <li>{interview.interviewee.name}</li>
+            <li onClick={() => onInterviewSelect(interview)}>{interview.interviewee.name}</li>
         </div>
     );
 };
