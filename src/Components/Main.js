@@ -5,6 +5,7 @@ import CompanyList from './Companies/CompanyList'
 // import CompanyDetail from './Companies/CompanyDetail'
 import HomePage from './HomePage'
 import InterviewForm from './Interviews/InterviewForm'
+import UserProfile from './Users/UserProfile'
 
 class Main extends Component {
   render() {
@@ -15,6 +16,7 @@ class Main extends Component {
           <Route exact path='/interviews/new' component={InterviewForm} />
           <Route exact path='/companies' component={CompanyList} />
           <Route exact path='/' component={HomePage} />
+          <Route exact path='/users/:id' component={UserProfile} />
         </Switch>
       </div>
     )
