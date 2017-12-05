@@ -3,7 +3,7 @@ import React from 'react';
 const InterviewListItem = ({interview}) => {
     return (
         <div>
-            <li>{interview.job_title}</li>
+            <li>{interview.interviewee.name}</li>
         </div>
     );
 };
