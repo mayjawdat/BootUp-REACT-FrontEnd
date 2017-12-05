@@ -67,7 +67,7 @@ class InterviewForm extends Component {
                     </div>
                   )}
                 </RadioGroup>
-              <RadioGroup field="offer">
+              <RadioGroup field="acceptOffer">
                   { group => (
                     <div>
                       Did you accept an offer? <br />
@@ -80,7 +80,7 @@ class InterviewForm extends Component {
                 </RadioGroup>
 
                 
-                  Which of the following did you complete?
+                Which of the following did you complete?<br/>
                 <label htmlFor="phoneScreen" className="mr-2">Phone screen</label>
                 <Checkbox field="phoneScreen" id="phoneScreen" className="d-inline-block" /><br/>
 
@@ -96,27 +96,27 @@ class InterviewForm extends Component {
                 <label htmlFor="whiteboardChallenge" className="mr-2">Whiteboarding challenge</label>
                 <Checkbox field="whiteboardChallenge" id="whiteboardChallenge" className="d-inline-block" /><br/>
 
-                Please elaborate as needed.
+                Please elaborate as needed.<br/>
                 <label htmlFor="phoneScreenDetails">Phone screen details:</label>
-                <StyledTextArea field="phoneScreenDetails" id="phoneScreenDetails" />
+                <StyledTextArea field="phoneScreenDetails" id="phoneScreenDetails" /><br/>
                 
                 <label htmlFor="techScreenDetails">Tech screen details:</label>
-                <StyledTextArea field="techScreenDetails" id="techScreenDetails" />
+                <StyledTextArea field="techScreenDetails" id="techScreenDetails" /><br/>
 
                 <label htmlFor="takeHomeChallengeDetails">Take-home challenge details:</label>
-                <StyledTextArea field="takeHomeChallengeDetails" id="takeHomeChallengeDetails" />
+                <StyledTextArea field="takeHomeChallengeDetails" id="takeHomeChallengeDetails" /><br/>
                 
                 <label htmlFor="onsiteInterviewDetails">On-site interview details:</label>
-                <StyledTextArea field="onsiteInterviewDetails" id="onsiteInterviewDetails" />
+                <StyledTextArea field="onsiteInterviewDetails" id="onsiteInterviewDetails" /><br/>
                 
                 <label htmlFor="whiteboardChallengeDetails">Whiteboarding challenge details:</label>
-                <StyledTextArea field="whiteboardChallengeDetails" id="whiteboardChallengeDetails" />
+                <StyledTextArea field="whiteboardChallengeDetails" id="whiteboardChallengeDetails" /><br/>
                 
                 <label htmlFor="negotiationsDetails">Negotiation details:</label>
-                <StyledTextArea field="negotiationsDetails" id="negotiationsDetails" />
+                <StyledTextArea field="negotiationsDetails" id="negotiationsDetails" /><br/>
                 
                 <label htmlFor="interviewNotes">Additional interview notes:</label>
-                <StyledTextArea field="interviewNotes" id="interviewNotes" />
+                <StyledTextArea field="interviewNotes" id="interviewNotes" /><br/><br/>
                 
                 <button type="submit" className="mb-4 btn btn-primary">Submit</button>
             </form>
