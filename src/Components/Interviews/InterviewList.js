@@ -21,6 +21,7 @@ class InterviewList extends Component {
 
   interviewItems() {
     return this.state.interviews.map(interview => (
+      // console.log(interview)
       <InterviewListItem
       onInterviewSelect = {selectedInterview => this.setState({selectedInterview})}
       key={interview.id} 
