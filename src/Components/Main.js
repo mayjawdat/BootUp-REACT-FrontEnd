@@ -8,6 +8,7 @@ import InterviewForm from './Interviews/InterviewForm'
 import UserProfile from './Users/UserProfile'
 
 class Main extends Component {
+
   render() {
     return (
       <div className="main" style={styles.main}>
@@ -17,6 +18,7 @@ class Main extends Component {
           <Route exact path='/companies' component={CompanyList} />
           <Route exact path='/' component={HomePage} />
           <Route exact path='/users/:id' component={UserProfile} />
+          <Route exact path='companies/:id'component={CompanyProfile} />
         </Switch>
       </div>
     )
