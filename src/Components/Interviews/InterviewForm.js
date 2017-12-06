@@ -1,65 +1,151 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Form, Text, Radio, RadioGroup, Select, Checkbox, StyledTextArea } from 'react-form';
 import axios from 'axios'
 
 class InterviewForm extends Component {
+
+  constructor( props ) {
+      super( props );
+      this.state = {};
+
+      this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleSubmit(submittedValues){
+    console.log(submittedValues)
+    axios({
+      method: 'post',
+      url: '/api/interviews',
+      data: {interview: submittedValues}
+    })
+    .then((response) => console.log(response));
+  }
+  
+
   render() {
     return (
-      <form className="New-Interview">
-          Position:
-          <input type="text" name="jobTitle"/><br/>
-          Company:
-          <input type="text" name="company"/><br/><br/>
+      <div>
+        <Form onSubmit={submittedValues =>  this.handleSubmit(submittedValues)}>
+          { formApi => (
+            <form onSubmit={formApi.submitForm} id='newInterviewForm'>
+              <label htmlFor="user_id">userid:</label>
+              <Text field="user_id" id="user_id" /><br />
+              <label htmlFor="company_id">companyid:</label>
+              <Text field="company_id" id="company_id" /><br />
 
-          How difficult was the interview overall? 
-          <input type="radio" name="difficultyRating" value="easy"/> Easy <input type="radio" name="difficultyRating" value="medium"/> Medium <input type="radio" name="difficultyRating" value="hard"/> Hard<br/>
+              <label htmlFor="jobTitle">Position:</label>
+              <Text field="jobTitle" id="jobTitle" /><br />
+              <label htmlFor="company">Company:</label>
+              <Text field="company" id="company" /><br />
 
-          How was your experience overall?
-          <input type="radio" name="experienceRating"value="positive"/> Positive <input type="radio" name="experienceRating" value="neutral"/> Neutral <input type="radio" name="experienceRating" value="negative"/> Negative<br/><br/>
+              <RadioGroup field="difficultyRating">
+                  { group => (
+                    <div>
+                      How difficult was the interview overall? <br />
+                      <label htmlFor="easy" className="mr-2">Easy</label>
+                      <Radio group={group} value="1" id="easy" className="mr-3 d-inline-block" />
+                      <label htmlFor="medium" className="mr-2">Medium</label>
+                      <Radio group={group} value="2" id="medium" className="d-inline-block" />
+                      <label htmlFor="hard" className="mr-2">Hard</label>
+                      <Radio group={group} value="3" id="hard" className="d-inline-block" />
+                    </div>
+                  )}
+                </RadioGroup>
+              <RadioGroup field="experienceRating">
+                  { group => (
+                    <div>
+                      How was your experience overall? <br />
+                      <label htmlFor="negative" className="mr-2">negative</label>
+                      <Radio group={group} value="1" id="negative" className="mr-3 d-inline-block" />
+                      <label htmlFor="neutral" className="mr-2">Neutral</label>
+                      <Radio group={group} value="2" id="neutral" className="d-inline-block" />
+                      <label htmlFor="positive" className="mr-2">Positive</label>
+                      <Radio group={group} value="3" id="positive" className="d-inline-block" />
+                    </div>
+                  )}
+                </RadioGroup>
+              <RadioGroup field="referral">
+                  { group => (
+                    <div>
+                      Did you receive a referral? <br />
+                      <label htmlFor="yes" className="mr-2">Yes</label>
+                      <Radio group={group} value="1" id="yes" className="mr-3 d-inline-block" />
+                      <label htmlFor="no" className="mr-2">No</label>
+                      <Radio group={group} value="0" id="no" className="d-inline-block" />
+                    </div>
+                  )}
+                </RadioGroup>
+              <RadioGroup field="offer">
+                  { group => (
+                    <div>
+                      Did you receive an offer? <br />
+                      <label htmlFor="yes" className="mr-2">Yes</label>
+                      <Radio group={group} value="1" id="yes" className="mr-3 d-inline-block" />
+                      <label htmlFor="no" className="mr-2">No</label>
+                      <Radio group={group} value="0" id="no" className="d-inline-block" />
+                    </div>
+                  )}
+                </RadioGroup>
+              <RadioGroup field="acceptOffer">
+                  { group => (
+                    <div>
+                      Did you accept an offer? <br />
+                      <label htmlFor="yes" className="mr-2">Yes</label>
+                      <Radio group={group} value="1" id="yes" className="mr-3 d-inline-block" />
+                      <label htmlFor="no" className="mr-2">No</label>
+                      <Radio group={group} value="0" id="no" className="d-inline-block" />
+                    </div>
+                  )}
+                </RadioGroup>
 
-          Did you receive a referral?  
-          <input type="radio" name="referral" value="yes"/> Yes <input type="radio" name="referral" value="no"/> No<br/>
+                
+                Which of the following did you complete?<br/>
+                <label htmlFor="phoneScreen" className="mr-2">Phone screen</label>
+                <Checkbox field="phoneScreen" id="phoneScreen" className="d-inline-block" /><br/>
 
+                <label htmlFor="techScreen" className="mr-2">Tech screen</label>
+                <Checkbox field="techScreen" id="techScreen" className="d-inline-block" /><br/>
 
-          Did you receive an offer? 
-          <input type="radio" name="offer" value="yes"/> Yes <input type="radio" name="offer" value="no"/> No<br/>
+                <label htmlFor="takeHomeChallenge" className="mr-2">Take-home challenge</label>
+                <Checkbox field="takeHomeChallenge" id="takeHomeChallenge" className="d-inline-block" /><br/>
 
-          Did you accept an offer? 
-          <input type="radio" name="offerAccepted" value="yes"/> Yes <input type="radio" name="phoneScreen" value="no"/> No<br/><br/>
+                <label htmlFor="onsiteInterview" className="mr-2">On-site interview</label>
+                <Checkbox field="onsiteInterview" id="onsiteInterview" className="d-inline-block" /><br/>
 
-          Which of the following did you complete?<br/>
-          Phone screen <input type="checkbox" name="phoneScreen"/><br/>
-          Tech screen <input type="checkbox" name="techScreen"/><br/>
-          Take-home challenge <input type="checkbox" name="takeHomeChallenge"/><br/>
-          On-site interview <input type="checkbox" name="onsiteInterview"/><br/>
-          Whiteboarding challenge <input type="checkbox" name="whiteboardChallenge"/><br/><br/>
+                <label htmlFor="whiteboardChallenge" className="mr-2">Whiteboarding challenge</label>
+                <Checkbox field="whiteboardChallenge" id="whiteboardChallenge" className="d-inline-block" /><br/>
 
+                Please elaborate as needed.<br/>
+                <label htmlFor="phone_screen_details">Phone screen details:</label>
+                <StyledTextArea field="phone_screen_details" id="phone_screen_details" /><br/>
+                
+                <label htmlFor="tech_screen_details">Tech screen details:</label>
+                <StyledTextArea field="tech_screen_details" id="tech_screen_details" /><br/>
 
-          Phone screen details:
-          <input type="text" name="phoneScreenDetails"/><br/> 
-
-          Tech screen details:
-          <input type="text" name="techScreenDetails"/><br/>
-
-          Take-home challenge details:
-          <input type="text" name="takeHomeChallengeDetails"/><br/>
-
-          On-site interview details:
-          <input type="text" name="onsiteInterviewDetails"/><br/>
-
-          Whiteboarding challenge details:
-          <input type="text" name="whiteboardChallengeDetails"/><br/>
-
-          Negotiation details:
-          <input type="text" name="negotiationsDetails"/><br/>
-          Additional interview notes:
-          <input type="text" name="interviewNotes"/><br/><br/>
-          
-          <button className="submit">submit</button><br/>
-      </form>
+                <label htmlFor="take_home_challenge_details">Take-home challenge details:</label>
+                <StyledTextArea field="take_home_challenge_details" id="take_home_challenge_details" /><br/>
+                
+                <label htmlFor="onsite_details">On-site interview details:</label>
+                <StyledTextArea field="onsite_details" id="onsite_details" /><br/>
+                
+                <label htmlFor="whiteboarding_details">Whiteboarding challenge details:</label>
+                <StyledTextArea field="whiteboarding_details" id="whiteboarding_details" /><br/>
+                
+                <label htmlFor="negotiation_details">Negotiation details:</label>
+                <StyledTextArea field="negotiation_details" id="negotiation_details" /><br/>
+                
+                <label htmlFor="notes">Additional interview notes:</label>
+                <StyledTextArea field="notes" id="notes" /><br/><br/>
+                
+                <button type="submit" className="mb-4 btn btn-primary">Submit</button>
+            </form>
+          )}
+        </Form>
+      </div>
     )
   }
 }
 
 export default InterviewForm
+
 
