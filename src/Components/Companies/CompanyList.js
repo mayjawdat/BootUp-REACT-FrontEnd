@@ -1,24 +1,26 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import CompanyDetail from './CompanyList'
+import CompanyItemDetail from './CompanyItemDetail'
 import CompanyListItem from './CompanyListItem'
+import './Company.css';
 
 class CompanyList extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      companies: []
+      companies: [],
+      selectedCompany: "loading."
     }
 
     this.companyItems = this.companyItems.bind(this);
   }
 
   companyItems() {
-    console.log('yes')
     return this.state.companies.map(company => (
         <CompanyListItem
+          onCompanySelect = {selectedCompany => this.setState({selectedCompany})}
           key={company.id}
           company={company} />
       )
@@ -34,6 +36,7 @@ class CompanyList extends Component {
     return (
       <div className="company-list">
         <h2>Company List</h2>
+        <CompanyItemDetail selectedCompany = {this.state.selectedCompany}/>
         <ul>
           {this.companyItems()}
         </ul>
@@ -51,9 +54,9 @@ export default CompanyList
 // const VideoList = (props) => {
 //   const videoItems = props.videos.map((video) => {
 //     return (
-//       <VideoListItem  
+//       <VideoListItem
 //         onVideoSelect = {props.onVideoSelect}
-//         key = {video.etag} 
+//         key = {video.etag}
 //         video = {video} />
 //     )
 //   });
