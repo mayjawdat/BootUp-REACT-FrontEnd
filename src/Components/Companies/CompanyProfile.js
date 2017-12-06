@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 class CompanyProfile extends Component {
-  contstructor() {
+  constructor() {
     super()
 
     this.state = {
@@ -14,6 +14,8 @@ class CompanyProfile extends Component {
         has_apprenticeship: ""
       }
     }
+
+    // this.interviewItems = this.interviewItems.bind(this)
   }
 
   componentDidMount() {
@@ -24,7 +26,9 @@ class CompanyProfile extends Component {
     )
   }
 
+  // interviewItems() {
   
+  // }
 
   render() {
     return (
@@ -36,10 +40,13 @@ class CompanyProfile extends Component {
           <li>{this.state.company.tech_field}</li>
           <li>{this.state.company.has_apprenticeship}</li>
         </ul>
-        <h3>Interviews</h3>
+        <h3>{this.state.company.name} Interviews</h3>
         <ul>
+          
         </ul>
       </div>
     )
   }
 }
+
+export default CompanyProfile
