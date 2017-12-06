@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import CompanyItemDetail from './CompanyItemDetail'
 import CompanyListItem from './CompanyListItem'
-import '../../CSS/Company.css';
+import '../../css/Company.css';
 
 class CompanyList extends Component {
   constructor(props) {
