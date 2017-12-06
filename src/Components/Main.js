@@ -6,9 +6,11 @@ import HomePage from './HomePage'
 import InterviewForm from './Interviews/InterviewForm'
 import SearchBox from './Searches/searchBox'
 import UserProfile from './Users/UserProfile'
+import CompanyProfile from './Companies/CompanyProfile'
 
 
 class Main extends Component {
+
   render() {
     return (
       <div className="main" style={styles.main}>
@@ -19,7 +21,7 @@ class Main extends Component {
           <Route exact path='/' component={HomePage} />
           <Route exact path='/search' component={SearchBox} />
           <Route exact path='/users/:id' component={UserProfile} />
-
+          <Route exact path='/companies/:id' component={CompanyProfile} />
         </Switch>
       </div>
     )

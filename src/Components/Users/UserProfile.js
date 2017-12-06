@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 class UserProfile extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
 
     this.state = {
       user: {
@@ -39,7 +39,7 @@ class UserProfile extends Component {
   userSkills() {
     return this.state.user.skills.map(
       skill => (
-        <span> skill </span>
+        <span> {skill.name} </span>
       )
     )
   }
@@ -47,10 +47,7 @@ class UserProfile extends Component {
   interviewItems() {
     return this.state.user.interviews.map(
       interview => (
-        // {interview.job_title}
-        // {interview.company.name}
-        <li>Job Title at Company</li>
-
+        <li>{`${interview.job_title} at ${interview.company.name}`}</li>
       )
     )
   }
