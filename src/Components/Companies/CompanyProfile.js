@@ -3,8 +3,8 @@ import CompanyItemDetail from './CompanyItemDetail'
 import axios from 'axios'
 
 class CompanyProfile extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       company: {

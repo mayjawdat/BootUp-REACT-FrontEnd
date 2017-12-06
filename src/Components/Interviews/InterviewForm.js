@@ -41,20 +41,20 @@ class InterviewForm extends Component {
               <RadioGroup field="difficultyRating">
                   { group => (
                     <div>
-                      How difficult was the interview overall? <br />
+                      How difficult was this company's interview process? <br />
                       <label htmlFor="easy" className="mr-2">Easy</label>
                       <Radio group={group} value="1" id="easy" className="mr-3 d-inline-block" />
-                      <label htmlFor="medium" className="mr-2">Medium</label>
-                      <Radio group={group} value="2" id="medium" className="d-inline-block" />
-                      <label htmlFor="hard" className="mr-2">Hard</label>
-                      <Radio group={group} value="3" id="hard" className="d-inline-block" />
+                      <label htmlFor="average" className="mr-2">Average</label>
+                      <Radio group={group} value="2" id="average" className="d-inline-block" />
+                      <label htmlFor="difficult" className="mr-2">Difficult</label>
+                      <Radio group={group} value="3" id="difficult" className="d-inline-block" />
                     </div>
                   )}
                 </RadioGroup>
               <RadioGroup field="experienceRating">
                   { group => (
                     <div>
-                      How was your experience overall? <br />
+                      How was your overall experience with this company? <br />
                       <label htmlFor="negative" className="mr-2">negative</label>
                       <Radio group={group} value="1" id="negative" className="mr-3 d-inline-block" />
                       <label htmlFor="neutral" className="mr-2">Neutral</label>
@@ -67,7 +67,7 @@ class InterviewForm extends Component {
               <RadioGroup field="referral">
                   { group => (
                     <div>
-                      Did you receive a referral? <br />
+                      Did you receive a referral for this position? <br />
                       <label htmlFor="yes" className="mr-2">Yes</label>
                       <Radio group={group} value="1" id="yes" className="mr-3 d-inline-block" />
                       <label htmlFor="no" className="mr-2">No</label>
@@ -99,7 +99,7 @@ class InterviewForm extends Component {
                 </RadioGroup>
 
                 
-                Which of the following did you complete?<br/>
+                Please detail the steps of the interview process.<br/>
                 <label htmlFor="phoneScreen" className="mr-2">Phone screen</label>
                 <Checkbox field="phoneScreen" id="phoneScreen" className="d-inline-block" /><br/>
 

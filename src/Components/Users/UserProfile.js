@@ -13,7 +13,7 @@ class UserProfile extends Component {
         current_position: "",
         current_company: "",
         cohort: "",
-        year: 0,
+        year: "",
         location: "",
         email: "",
         github_url: "",
