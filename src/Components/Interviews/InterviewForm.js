@@ -1,19 +1,38 @@
 import React, { Component } from 'react'
 import { Form, Text, Radio, RadioGroup, Select, Checkbox, StyledTextArea } from 'react-form';
+import axios from 'axios'
 
 class InterviewForm extends Component {
 
   constructor( props ) {
       super( props );
       this.state = {};
+
+      this.handleSubmit = this.handleSubmit.bind(this)
   }
+
+  handleSubmit(submittedValues){
+    console.log(submittedValues)
+    axios({
+      method: 'post',
+      url: '/api/interviews',
+      data: {interview: submittedValues}
+    })
+    .then((response) => console.log(response));
+  }
+  
 
   render() {
     return (
       <div>
-        <Form onSubmit={submittedValues => this.setState( { submittedValues } )}>
+        <Form onSubmit={submittedValues =>  this.handleSubmit(submittedValues)}>
           { formApi => (
             <form onSubmit={formApi.submitForm} id='newInterviewForm'>
+              <label htmlFor="user_id">userid:</label>
+              <Text field="user_id" id="user_id" /><br />
+              <label htmlFor="company_id">companyid:</label>
+              <Text field="company_id" id="company_id" /><br />
+
               <label htmlFor="jobTitle">Position:</label>
               <Text field="jobTitle" id="jobTitle" /><br />
               <label htmlFor="company">Company:</label>
@@ -97,26 +116,26 @@ class InterviewForm extends Component {
                 <Checkbox field="whiteboardChallenge" id="whiteboardChallenge" className="d-inline-block" /><br/>
 
                 Please elaborate as needed.<br/>
-                <label htmlFor="phoneScreenDetails">Phone screen details:</label>
-                <StyledTextArea field="phoneScreenDetails" id="phoneScreenDetails" /><br/>
+                <label htmlFor="phone_screen_details">Phone screen details:</label>
+                <StyledTextArea field="phone_screen_details" id="phone_screen_details" /><br/>
                 
-                <label htmlFor="techScreenDetails">Tech screen details:</label>
-                <StyledTextArea field="techScreenDetails" id="techScreenDetails" /><br/>
+                <label htmlFor="tech_screen_details">Tech screen details:</label>
+                <StyledTextArea field="tech_screen_details" id="tech_screen_details" /><br/>
 
-                <label htmlFor="takeHomeChallengeDetails">Take-home challenge details:</label>
-                <StyledTextArea field="takeHomeChallengeDetails" id="takeHomeChallengeDetails" /><br/>
+                <label htmlFor="take_home_challenge_details">Take-home challenge details:</label>
+                <StyledTextArea field="take_home_challenge_details" id="take_home_challenge_details" /><br/>
                 
-                <label htmlFor="onsiteInterviewDetails">On-site interview details:</label>
-                <StyledTextArea field="onsiteInterviewDetails" id="onsiteInterviewDetails" /><br/>
+                <label htmlFor="onsite_details">On-site interview details:</label>
+                <StyledTextArea field="onsite_details" id="onsite_details" /><br/>
                 
-                <label htmlFor="whiteboardChallengeDetails">Whiteboarding challenge details:</label>
-                <StyledTextArea field="whiteboardChallengeDetails" id="whiteboardChallengeDetails" /><br/>
+                <label htmlFor="whiteboarding_details">Whiteboarding challenge details:</label>
+                <StyledTextArea field="whiteboarding_details" id="whiteboarding_details" /><br/>
                 
-                <label htmlFor="negotiationsDetails">Negotiation details:</label>
-                <StyledTextArea field="negotiationsDetails" id="negotiationsDetails" /><br/>
+                <label htmlFor="negotiation_details">Negotiation details:</label>
+                <StyledTextArea field="negotiation_details" id="negotiation_details" /><br/>
                 
-                <label htmlFor="interviewNotes">Additional interview notes:</label>
-                <StyledTextArea field="interviewNotes" id="interviewNotes" /><br/><br/>
+                <label htmlFor="notes">Additional interview notes:</label>
+                <StyledTextArea field="notes" id="notes" /><br/><br/>
                 
                 <button type="submit" className="mb-4 btn btn-primary">Submit</button>
             </form>
@@ -130,28 +149,3 @@ class InterviewForm extends Component {
 export default InterviewForm
 
 
-
-{/* 
-
-          Phone screen details:
-          <input type="text" name=""/><br/> 
-
-          Tech screen details:
-          <input type="text" name="techScreenDetails"/><br/>
-
-          Take-home challenge details:
-          <input type="text" name="takeHomeChallengeDetails"/><br/>
-
-          On-site interview details:
-          <input type="text" name=""/><br/>
-
-          Whiteboarding challenge details:
-          <input type="text" name=""/><br/>
-
-          Negotiation details:
-          <input type="text" name="negotiationsDetails"/><br/>
-          Additional interview notes:
-          <input type="text" name="interviewNotes"/><br/><br/>
-          
-          <button className="submit">submit</button><br/>
-      </form> */}
