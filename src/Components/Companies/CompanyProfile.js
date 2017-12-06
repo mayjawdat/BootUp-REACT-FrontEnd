@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CompanyItemDetail from './CompanyItemDetail'
 import axios from 'axios'
 
 class CompanyProfile extends Component {
@@ -33,14 +34,8 @@ class CompanyProfile extends Component {
   render() {
     return (
       <div className="company-profile">
-        <h2>{this.state.company.name}</h2>
-        <ul>
-          <li>{this.state.company.location}</li>
-          <li>{this.state.company.website}</li>
-          <li>{this.state.company.tech_field}</li>
-          <li>{this.state.company.has_apprenticeship}</li>
-        </ul>
-        <h3>{this.state.company.name} Interviews</h3>
+        <CompanyItemDetail />
+
         <ul>
           
         </ul>

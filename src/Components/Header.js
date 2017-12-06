@@ -12,7 +12,6 @@ class Header extends Component {
             <li><Link to={`/users/${this.props.current_user.id}`}>Profile</Link></li>
             <li><Link to="/companies">Companies</Link></li>
             <li><Link to="/interviews">Interviews</Link></li>
-            <li><Link to="/interviews/new">New Interview</Link></li>
             <li><Link to="/search">Company Search</Link></li>
           </ul>
         </nav>

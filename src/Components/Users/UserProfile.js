@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 class UserProfile extends Component {
@@ -73,6 +74,7 @@ class UserProfile extends Component {
         <h3>Interviews</h3>
         <ul>
           {this.interviewItems()}
+          <li><Link to="/interviews/new">Add Interview</Link></li>
         </ul>
         <h3>Resources</h3>
         <ul>
