@@ -8,11 +8,11 @@ class Header extends Component {
         <h2>DBC Bootup</h2>
         <nav>
           <ul>
-            <li><Link to="/">BootUp</Link></li>
-            <li><Link to={`/users/${this.props.current_user.id}`}>Profile</Link></li>
+            <li><Link to="/interviews">BootUp</Link></li>
+            <li><Link to={`/users/${this.props.current_user.id}`}>{`${this.props.current_user.name}`}</Link></li>
+            <li><Link to="/search">SearchBox</Link></li>
             <li><Link to="/companies">Companies</Link></li>
-            <li><Link to="/interviews">Interviews</Link></li>
-            <li><Link to="/search">Company Search</Link></li>
+            <li><Link to="/">Resources</Link></li>
           </ul>
         </nav>
       </div>
