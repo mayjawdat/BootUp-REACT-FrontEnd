@@ -47,8 +47,11 @@ class SearchBox extends React.Component {
   render() {
     var companyName = this.state.companyName;
     return (
-      <div>
         <div className='search'>
+        {/* <div className="page-header"> */}
+        {/*  */}
+        {/* </div> */}
+        <div className='row'>
           <form onSubmit={this.handleSubmit}>
               <input type='text' placeholder=' Search for company...' name='search_form_input' value={this.state.searchTerm} onChange={this.handleChange} />
             <input type="submit" id="submit" value="Submit" />

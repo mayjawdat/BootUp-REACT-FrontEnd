@@ -57,7 +57,9 @@ class InterviewList extends Component {
   render() {
     return (
       <div className="interview-list">
-        <h2>Interview Reviews</h2>
+        <div className="page-header">
+          <h2>Interview Reviews</h2>
+        </div>
         <div id="filters">
           <button onClick={this.sortByRecent}>Recent</button>
           <span>  </span>

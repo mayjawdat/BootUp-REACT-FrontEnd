@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 /* NAVBAR */
+.App {
+  max-width: 1280px;
+  margin: 0 auto;
+}
 
 .header {
-  padding-bottom: 2em;
+  background-color: white;
+  height: 95px;
+  /* padding-bottom: 2em; */
   width: 98%;
 }
 
@@ -33,12 +40,30 @@
 
 .main {
   background-image: url("../Images/banner.png");
-  background-repeat: no-repeat;
-  background-size: 30em;
+  background-repeat: repeat-x;
+  /* background-size: 30em; */
+  background-size: auto 240px;
   border-radius: 15px;
-  padding: 10px;
-  margin: 0 auto;
+  padding: 0 20px 20px;
   width: 95%;
+  min-height: 240px;
+}
+
+.main p {
+  margin: 0;
+  padding: 0;
+}
+
+.main .page-header {
+  height: 240px;
+  margin-bottom: 16px
+}
+
+.page-header h2 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top:140px;
 }
 
 h2 {
@@ -57,10 +82,9 @@ li {
 }
 
 body {
-  margin: 200;
   padding: 0;
-  font-family: source sans pro;
-  font-size: 50px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5em;
 }
 
 #search {
@@ -104,10 +128,14 @@ body {
 
 .user-profile #photo {
   padding-top: 20px;
+  background-image: url("../Images/defaultProfile.png");
+  width: 50%;
+  text-align: center;
 }
 
 #photo img {
-  width: 50%;
+  margin: 0 auto;
+  width: 532px;
   height: auto;
 }
 
@@ -147,12 +175,8 @@ body {
 
 .footer #github-repo {
   margin-top: 25px;
-  margin-bottom: none;
+  margin-bottom: 0;
   width: 50px;
-}
-
-.header {
-  background-color: white;
 }
 
 ul {
@@ -188,5 +212,17 @@ ul {
   margin: 100;
   display: flex;
   justify-content: space-around;
+}
+
+.company-location {
+  font-size: .75em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: purple;
 }
 
