@@ -48,6 +48,9 @@ class SearchBox extends React.Component {
     var companyName = this.state.companyName;
     return (
       <div>
+        {/* <div className="page-header"> */}
+        {/*  */}
+        {/* </div> */}
         <div className='row'>
           <form onSubmit={this.handleSubmit}>
               <h5>Search:

@@ -22,13 +22,13 @@ class CompanyItemDetail extends Component {
       .then(({data}) => this.setState({company: data}))
   }
 
-
-
   render() {
     return (
       <div className="company-item-detail">
+        <div className="page-header">
+          <h2> {this.state.company.name} </h2>
+        </div>
       <div className="company-info">
-        <h3> {this.state.company.name} </h3>
         <p> {this.state.company.location} </p>
         <p> {this.state.company.website} </p>
       </div>
