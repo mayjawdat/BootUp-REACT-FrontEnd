@@ -11,6 +11,7 @@ class CompanyItemDetail extends Component {
       company: {
         name: "",
         interviews: [],
+        skills:[],
         location:"" //other properties of company
       }
     }
@@ -27,18 +28,23 @@ class CompanyItemDetail extends Component {
     return (
       <div className="company-item-detail">
       <div className="company-info">
-        <h2> {this.state.company.name} </h2>
+        <h3> {this.state.company.name} </h3>
         <p> {this.state.company.location} </p>
         <p> {this.state.company.website} </p>
-        //Add skills here
+      </div>
+      <div className="skill-list">
+        <h3> Interview BootTips available for following skill-sets: </h3>
+        {this.state.company.skills.map(skill => (
+          (<p>{skill.name}</p>)
+        ))}
       </div>
       <div className="interview-list">
-        <h2> Interview Reviews</h2>
+        <h3> Interview Reviews</h3>
         {this.state.company.interviews.map(interview => (
           <InterviewListItem
             key = {interview.id} 
             interview = {interview} />
-          ))}
+        ))}
         </div>
       </div>
     );
