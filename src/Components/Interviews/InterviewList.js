@@ -43,7 +43,7 @@ class InterviewList extends Component {
   }
 
   sortByCompany() {
-    return this.state.interviews.companies.sort()
+    // return this.state.interviews.companies.sort()
   }
 
   sortByLanguage() {
@@ -58,10 +58,15 @@ class InterviewList extends Component {
     return (
       <div className="interview-list">
         <h2>Interview Reviews</h2>
-        <button onClick={this.sortByRecent}>Recent</button><span>  </span>
-        <button onClick={this.sortByCompany}>Company</button><span>  </span>
-        <button onClick={this.sortByLanguage}>Language</button><span>  </span>
-        <button onClick={this.sortByDifficulty}>Difficulty</button><span>  </span>
+        <div id="filters">
+          <button onClick={this.sortByRecent}>Recent</button>
+          <span>  </span>
+          <button onClick={this.sortByCompany}>Company</button>
+          <span>  </span>
+          <button onClick={this.sortByLanguage}>Language</button>
+          <span>  </span>
+          <button onClick={this.sortByDifficulty}>Difficulty</button>
+        </div>
         <InterviewItemDetail selectedInterview = {this.state.selectedInterview}/>
         <ul>
           {this.interviewItems()}
