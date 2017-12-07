@@ -27,11 +27,4 @@ class Main extends Component {
   }
 }
 
-// const styles = {
-//   main: {
-//     border: "1px solid black",
-//     minHeight: '400px'
-//   }
-// }
-
 export default Main
