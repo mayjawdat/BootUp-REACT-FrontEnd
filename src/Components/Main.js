@@ -6,6 +6,8 @@ import HomePage from './HomePage'
 import InterviewForm from './Interviews/InterviewForm'
 import SearchBox from './Searches/searchBox'
 import UserProfile from './Users/UserProfile'
+import CompanyProfile from './Companies/CompanyProfile'
+import UserLogin from './Login/userLogin'
 import CompanyItemDetail from './Companies/CompanyItemDetail'
 
 class Main extends Component {
@@ -20,6 +22,7 @@ class Main extends Component {
           <Route exact path='/' component={HomePage} />
           <Route exact path='/search' component={SearchBox} />
           <Route exact path='/users/:id' component={UserProfile} />
+          <Route exact path='/login' component={UserLogin} />
           <Route exact path='/companies/:id' component={CompanyItemDetail} />
         </Switch>
       </div>

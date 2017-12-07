@@ -140,6 +140,14 @@ body {
   width: 50px;
 }
 
+.header {
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
 .footer #logo {
   margin-top: none;
   width: 150px;
