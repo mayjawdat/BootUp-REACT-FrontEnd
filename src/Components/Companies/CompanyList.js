@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import CompanyItemDetail from './CompanyItemDetail'
+//import CompanyItemDetail from './CompanyItemDetail'
 import CompanyListItem from './CompanyListItem'
 
 class CompanyList extends Component {
@@ -19,7 +19,7 @@ class CompanyList extends Component {
   companyItems() {
     return this.state.companies.map(company => (
         <CompanyListItem
-          onCompanySelect = {selectedCompany => this.setState({selectedCompany})}
+          // onCompanySelect = {selectedCompany => this.setState({selectedCompany})}
           key={company.id}
           company={company} />
       )
@@ -35,7 +35,7 @@ class CompanyList extends Component {
     return (
       <div className="company-list">
         <h2>Company List</h2>
-        <CompanyItemDetail selectedCompany = {this.state.selectedCompany}/>
+        
         <ul>
           {this.companyItems()}
         </ul>
@@ -47,15 +47,17 @@ class CompanyList extends Component {
 export default CompanyList
 
 
+// <CompanyItemDetail selectedCompany = {this.state.selectedCompany}/>
 
 
 
-// const VideoList = (props) => {
-//   const videoItems = props.videos.map((video) => {
-//     return (
-//       <VideoListItem
-//         onVideoSelect = {props.onVideoSelect}
-//         key = {video.etag}
-//         video = {video} />
+
+
+// companyItems() {
+//   return this.state.companies.map(company => (
+//       <CompanyListItem
+//         onCompanySelect = {selectedCompany => this.setState({selectedCompany})}
+//         key={company.id}
+//         company={company} />
 //     )
-//   });
+//   )
