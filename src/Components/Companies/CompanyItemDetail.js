@@ -26,8 +26,10 @@ class CompanyItemDetail extends Component {
   render() {
     return (
       <div className="company-item-detail">
+        <div className="page-header">
+          <h2> {this.state.company.name} </h2>
+        </div>
       <div className="company-info">
-        <h2> {this.state.company.name} </h2>
         <p> {this.state.company.location} </p>
         <p> {this.state.company.website} </p>
         //Add skills here

@@ -34,7 +34,9 @@ class CompanyList extends Component {
   render() {
     return (
       <div className="company-list">
-        <h2>Company List</h2>
+        <div className="page-header">
+          <h2>Company List</h2>
+        </div>
         
         <ul>
           {this.companyItems()}
