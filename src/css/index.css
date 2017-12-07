@@ -33,7 +33,7 @@
 
 .main {
   background-image: url("../Images/banner.png");
-  background-repeat: no-repeat; 
+  background-repeat: repeat-x; 
   background-size: 30em;
   border-radius: 15px;
   padding: 10px;
@@ -105,10 +105,14 @@ body {
 
 .user-profile #photo {
   padding-top: 20px;
+  background-image: url("../Images/defaultProfile.png");
+  width: 50%;
+  text-align: center;
 }
 
 #photo img {
-  width: 50%;
+  margin: 0 auto;
+  width: 532px;
   height: auto;
 }
 
