@@ -26,7 +26,6 @@ class UserProfile extends Component {
 
     this.userSkills = this.userSkills.bind(this)
     this.interviewItems = this.interviewItems.bind(this)
-    // this.resourceItems = this.resourceItems.bind(this)
   }
 
   componentDidMount() {
@@ -53,23 +52,19 @@ class UserProfile extends Component {
     )
   }
 
-  // resourceItems() {
-
-  // }
-
   render() {
     return (
       <div className="user-profile">
-        <p>{this.state.user.photo_url}</p>
+        <img src={this.state.user.photo_url} />
         <h2>{this.state.user.name}</h2>
         <ul>
           <li>{this.state.user.current_position} at {this.state.user.current_company}</li>
           <li>{this.state.user.cohort} {this.state.user.year} - {this.state.user.location}</li>
             {this.userSkills()}
-          <li>{this.state.user.email}</li>
-          <li>{this.state.user.github_url}</li>
-          <li>{this.state.user.linkedin_url}</li>
-          <li>{this.state.user.facebook_url}</li>
+            <li><a href={`mailto:${this.state.user.email}`}>email</a></li>
+            {this.state.user.github_url && <li><a href={this.state.user.github_url} target="_blank">GitHub</a></li>}
+            {this.state.user.linkedin_url && <li><a href={this.state.user.linkedin_url} target="_blank">LinkedIn</a></li>}
+            {this.state.user.facebook_url && <li><a href={this.state.user.facebook_url} target="_blank">Facebook</a></li>}
         </ul>
         <h3>Interviews</h3>
         <ul>
