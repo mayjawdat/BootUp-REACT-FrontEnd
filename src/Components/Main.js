@@ -6,8 +6,12 @@ import HomePage from './HomePage'
 import InterviewForm from './Interviews/InterviewForm'
 import SearchBox from './Searches/searchBox'
 import UserProfile from './Users/UserProfile'
+<<<<<<< HEAD
 import CompanyProfile from './Companies/CompanyProfile'
 import UserLogin from './Login/userLogin'
+=======
+import CompanyItemDetail from './Companies/CompanyItemDetail'
+>>>>>>> f0babea8bcb5d2cdd118b5fb524f8077a79d1b8d
 
 
 class Main extends Component {
@@ -22,8 +26,12 @@ class Main extends Component {
           <Route exact path='/' component={HomePage} />
           <Route exact path='/search' component={SearchBox} />
           <Route exact path='/users/:id' component={UserProfile} />
+<<<<<<< HEAD
           <Route exact path='/companies/:id' component={CompanyProfile} />
           <Route exact path='/login' component={UserLogin} />
+=======
+          <Route exact path='/companies/:id' component={CompanyItemDetail} />
+>>>>>>> f0babea8bcb5d2cdd118b5fb524f8077a79d1b8d
         </Switch>
       </div>
     )
