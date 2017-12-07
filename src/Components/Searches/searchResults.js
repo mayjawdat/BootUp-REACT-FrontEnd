@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import CompanyListItem from '../Companies/CompanyListItem.js'
 
 export default class searchResults extends React.Component {
   constructor(props) {
@@ -13,11 +14,9 @@ export default class searchResults extends React.Component {
   render(){
     return(
       <div className="search-results">
-        { this.state.searchResults.map((result) => {
+        { this.props.searchResults.map((result, index) => {
           return(
-            <div className="result-item">
-              {result}
-            </div>
+              <CompanyListItem company={result} key={index} />
           )
         })}
       </div>
