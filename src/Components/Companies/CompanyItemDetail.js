@@ -26,11 +26,13 @@ class CompanyItemDetail extends Component {
     return (
       <div className="company-item-detail">
         <div className="page-header">
-          <h2> {this.state.company.name} </h2>
+          <h2> 
+            <a href={this.state.company.website} target="_blank">{this.state.company.name}</a> - <span className="company-location">{this.state.company.location}</span> 
+          </h2>
         </div>
       <div className="company-info">
-        <p> {this.state.company.location} </p>
-        <p> {this.state.company.website} </p>
+        <p>  </p>
+        <p>  </p>
       </div>
       <div className="skill-list">
         <h3> Interview BootTips available for following skill-sets: </h3>
