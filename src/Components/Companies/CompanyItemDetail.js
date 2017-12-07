@@ -26,12 +26,12 @@ class CompanyItemDetail extends Component {
   render() {
     return (
       <div className="company-item-detail">
+      <h2> {this.state.company.name} </h2>
       {this.state.company.interviews.map(interview => (
         <InterviewListItem
           key = {interview.id} 
           interview = {interview} />
         ))}
-      {this.state.company.name}
       </div>
     );
   }
