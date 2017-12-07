@@ -1,5 +1,146 @@
+
+/* NAVBAR */
+
+.header {
+  padding-bottom: 2em;
+  width: 98%;
+}
+
+.header #logo {
+  width: 250px;
+  float: left;
+  padding-left: 30px;
+}
+
+.header #links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header #links li {
+  float: right;
+  display: block;
+  text-align: center;
+  font-size: 35px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+/* MAIN PAGE LAYOUT */
+
+.main {
+  background-image: url("../Images/banner.png");
+  background-repeat: no-repeat; 
+  background-size: 30em;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0 auto;
+  width: 95%;
+}
+
+h2 {
+  font: white;
+}
+
+button {
+  width: 225px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 25px;
+}
+
+li {
+  list-style: none;
+}
+
 body {
-  margin: 0;
+  margin: 200;
   padding: 0;
-  font-family: sans-serif;
+  font-family: source sans pro;
+  font-size: 50px;
+}
+
+#search {
+  width: 200px;
+  height: 20px;
+  margin: 5px;
+
+}
+
+#submit {
+  width: 100px;
+  height: 100px;
+  display: run-in;
+}
+
+.row {
+  font-family: source sans pro;
+  font-size: 50px;
+  margin: 100;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+
+/* INDEX */
+
+.interview-list button a {
+  color: #85D0D0;
+}
+
+
+/* USER PROFILE */
+
+.user-profile #photo {
+  padding-top: 20px;
+}
+
+#photo img {
+  width: 50%;
+  height: auto;
+}
+
+.user-profile #add-button {
+  width: 225px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 25px;
+  background-color: #9E9D9E;
+}
+
+#add-button a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#add-button a img {
+  height: 30px;
+  width: 30px;
+}
+
+#add-button img {
+  size: 2px;
+}
+
+
+/* FOOTER */
+
+.footer #github-repo {
+  margin-top: 25px;
+  margin-bottom: none;
+  width: 50px;
+}
+
+.footer #logo {
+  margin-top: none;
+  width: 150px;
 }

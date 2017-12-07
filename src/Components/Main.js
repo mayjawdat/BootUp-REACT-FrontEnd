@@ -8,12 +8,11 @@ import SearchBox from './Searches/searchBox'
 import UserProfile from './Users/UserProfile'
 import CompanyItemDetail from './Companies/CompanyItemDetail'
 
-
 class Main extends Component {
 
   render() {
     return (
-      <div className="main" style={styles.main}>
+      <div className="main">
         <Switch>
           <Route exact path='/interviews' component={InterviewList} />
           <Route exact path='/interviews/new' component={InterviewForm} />
@@ -25,13 +24,6 @@ class Main extends Component {
         </Switch>
       </div>
     )
-  }
-}
-
-const styles = {
-  main: {
-    border: "1px solid black",
-    minHeight: '400px'
   }
 }
 

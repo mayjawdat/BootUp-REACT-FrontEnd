@@ -12,6 +12,11 @@ class InterviewList extends Component {
       interviews: [],
       selectedInterview: 'Loading...'
     }
+
+    this.sortByRecent = this.sortByRecent.bind(this)
+    this.sortByCompany = this.sortByCompany.bind(this)
+    this.sortByLanguage = this.sortByLanguage.bind(this)
+    this.sortByDifficulty = this.sortByDifficulty.bind(this)
   }
 
   componentDidMount() {
@@ -29,10 +34,34 @@ class InterviewList extends Component {
     ))
   }
 
+  sortByRecent() {
+    const interviews = this.state.interviews.sort((interviewOne, interviewTwo) => {
+        return interviewOne.created_at - interviewTwo.created_at
+      }
+    )
+    this.setState({interviews})
+  }
+
+  sortByCompany() {
+    return this.state.interviews.companies.sort()
+  }
+
+  sortByLanguage() {
+
+  }
+
+  sortByDifficulty() {
+
+  }
+
   render() {
     return (
       <div className="interview-list">
-        <h2>Interview List</h2>
+        <h2>Interview Reviews</h2>
+        <button onClick={this.sortByRecent}>Recent</button><span>  </span>
+        <button onClick={this.sortByCompany}>Company</button><span>  </span>
+        <button onClick={this.sortByLanguage}>Language</button><span>  </span>
+        <button onClick={this.sortByDifficulty}>Difficulty</button><span>  </span>
         <InterviewItemDetail selectedInterview = {this.state.selectedInterview}/>
         <ul>
           {this.interviewItems()}
