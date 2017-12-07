@@ -8,7 +8,6 @@ import SearchBox from './Searches/searchBox'
 import UserProfile from './Users/UserProfile'
 import CompanyProfile from './Companies/CompanyProfile'
 
-
 class Main extends Component {
 
   render() {
