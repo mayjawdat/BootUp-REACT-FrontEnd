@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import defaultProfile from '../../Images/defaultProfile.png'
+import plusSign from '../../Images/plusSign.png'
 
 class UserProfile extends Component {
   constructor() {
@@ -60,7 +62,9 @@ class UserProfile extends Component {
   render() {
     return (
       <div className="user-profile">
-        <p>{this.state.user.photo_url}</p>
+        <div id="photo">
+          <li><img id="logo" src={defaultProfile} /></li>
+        </div>
         <h2>{this.state.user.name}</h2>
         <ul>
           <li>{this.state.user.current_position} at {this.state.user.current_company}</li>
@@ -74,7 +78,7 @@ class UserProfile extends Component {
         <h3>Interviews</h3>
         <ul>
           {this.interviewItems()}
-          <li><Link to="/interviews/new">Add Interview</Link></li>
+            <button id="add-button"><Link id="add-interview" to="/interviews/new"><img id="plus" src={plusSign} /> Add Interview</Link></button>
         </ul>
         <h3>Resources</h3>
         <ul>
