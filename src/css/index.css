@@ -33,7 +33,7 @@
 
 .main {
   background-image: url("../Images/banner.png");
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: 30em;
   border-radius: 15px;
   padding: 10px;
@@ -71,14 +71,13 @@ body {
 }
 
 #submit {
-  width: 100px;
+  width: 50px;
   height: 100px;
   display: run-in;
 }
 
 .row {
   font-family: source sans pro;
-  font-size: 50px;
   margin: 100;
   display: flex;
   justify-content: space-around;
@@ -172,3 +171,22 @@ ul {
   padding: .5em 1em;
   background-color: green;
 }
+
+/*search*/
+
+.search {
+  font-family: source sans pro;
+  margin: 100;
+  display: flex;
+  justify-content: space-around;
+}
+
+.search input {
+  height: 40px;
+  font-size: .75em;
+  font-family: source sans pro;
+  margin: 100;
+  display: flex;
+  justify-content: space-around;
+}
+
