@@ -42,7 +42,7 @@
 }
 
 h2 {
-  font: white;
+  color: white;
 }
 
 button {
@@ -88,7 +88,15 @@ body {
 
 /* INDEX */
 
-.interview-list button a {
+.interview-list li {
+  text-align: center;
+}
+
+#filters {
+  text-align: center;
+}
+
+#filters button {
   color: #85D0D0;
 }
 
@@ -133,6 +141,10 @@ body {
 
 
 /* FOOTER */
+
+.footer {
+  text-align: center;
+}
 
 .footer #github-repo {
   margin-top: 25px;
