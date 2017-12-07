@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import InterviewListItem from '../Interviews/InterviewListItem'
 
 // Component Definition
 class CompanyItemDetail extends Component {
@@ -9,6 +10,7 @@ class CompanyItemDetail extends Component {
     this.state = {
       company: {
         name: "",
+        interviews: [],
         location:"" //other properties of company
       }
     }
@@ -19,9 +21,16 @@ class CompanyItemDetail extends Component {
       .then(({data}) => this.setState({company: data}))
   }
 
+
+
   render() {
     return (
       <div className="company-item-detail">
+      {this.state.company.interviews.map(interview => (
+        <InterviewListItem
+          key = {interview.id} 
+          interview = {interview} />
+        ))}
       {this.state.company.name}
       </div>
     );
