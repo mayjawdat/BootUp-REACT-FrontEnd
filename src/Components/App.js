@@ -3,23 +3,23 @@ import Header from './Header'
 import Footer from './Footer'
 import Main from './Main'
 import { BrowserRouter } from 'react-router-dom'
+import axios from 'axios'
 
 class App extends Component {
   constructor() {
     super()
 
     this.state = {
-      // current_user: null
-      current_user: { id: 1, skills: [] } // EXAMPLE ONLY
+      current_user: null
     }
-
-    this.setCurrentUser = this.setCurrentUser.bind(this)
   }
 
-  setCurrentUser(user){
-    this.setState({current_user: user}
-    )
+  componentDidMount() {
+    axios.get('/api/profile')
+      .then(({data}) =>  data.id && this.setState({current_user: data}))
+      .catch(error => console.log('Error fetching profile', error))
   }
+
 
   render() {
     return (

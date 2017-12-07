@@ -10,10 +10,14 @@ class Header extends Component {
         <nav>
           <li><Link to="/interviews"><img id="logo" src={BootUpLogo2} /></Link></li>
           <ul id="links">
-            <li><Link to={`/users/${this.props.current_user.id}`}>{`${this.props.current_user.name}`}</Link></li>
+            {this.props.current_user 
+              ? <li><Link to={`/users/${this.props.current_user.id}`}>{`${this.props.current_user.name}`}</Link></li>
+              : <li><a href="/api/auth/linkedin">Login/Sign-up with LinkedIn</a></li>
+            }
             <li><Link to="/">Resources</Link></li>
             <li><Link to="/companies">Companies</Link></li>
             <li><Link to="/search">SearchBox</Link></li>
+            {this.props.current_user && <li><a href='/api/logout'>Logout</a></li>}
           </ul>
         </nav>
       </div>

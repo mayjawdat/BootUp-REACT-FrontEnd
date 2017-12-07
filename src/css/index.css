@@ -152,3 +152,11 @@ ul {
   margin-top: none;
   width: 150px;
 }
+
+.link-button {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 1em;
+  background-color: green;
+}
