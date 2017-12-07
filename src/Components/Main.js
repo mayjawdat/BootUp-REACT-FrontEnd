@@ -7,6 +7,7 @@ import InterviewForm from './Interviews/InterviewForm'
 import SearchBox from './Searches/searchBox'
 import UserProfile from './Users/UserProfile'
 import CompanyProfile from './Companies/CompanyProfile'
+import UserLogin from './Login/userLogin'
 
 
 class Main extends Component {
@@ -22,6 +23,7 @@ class Main extends Component {
           <Route exact path='/search' component={SearchBox} />
           <Route exact path='/users/:id' component={UserProfile} />
           <Route exact path='/companies/:id' component={CompanyProfile} />
+          <Route exact path='/login' component={UserLogin} />
         </Switch>
       </div>
     )
@@ -31,8 +33,10 @@ class Main extends Component {
 const styles = {
   main: {
     border: "1px solid black",
-    minHeight: '400px'
+    minHeight: '400px',
+    display: 'flex',
   }
+
 }
 
 export default Main
