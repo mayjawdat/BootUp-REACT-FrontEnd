@@ -58,7 +58,7 @@ class UserProfile extends Component {
     return (
       <div className="user-profile">
         <div id="photo">
-          <li><img id="logo" src={defaultProfile} /></li>
+             <img id="logo" src={this.state.user.photo_url ? this.state.user.photo_url : defaultProfile } />}
         </div>
         <h2>{this.state.user.name}</h2>
         <ul>
