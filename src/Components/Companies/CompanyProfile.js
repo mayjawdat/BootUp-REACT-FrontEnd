@@ -37,7 +37,7 @@ class CompanyProfile extends Component {
         <CompanyItemDetail />
 
         <ul>
-          
+
         </ul>
       </div>
     )
