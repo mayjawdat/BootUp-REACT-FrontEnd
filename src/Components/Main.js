@@ -27,7 +27,6 @@ class Main extends Component {
           <Route exact path='/' component={HomePage} />
           <Route exact path='/search' component={SearchBox} />
           <Route exact path='/users/:id' component={UserProfile} />
-          <Route exact path='/companies/:id' component={CompanyProfile} />
           <Route exact path='/login' component={UserLogin} />
           <Route exact path='/companies/:id' component={CompanyItemDetail} />
           <Route exact path='/login' component={UserLogin} />

@@ -88,9 +88,9 @@ class InterviewList extends Component {
           <span>  </span>
           <button onClick={this.sortByCompany}>Company</button>
           <span>  </span>
-          <button onClick={this.sortByLanguage}>Language</button>
-          <span>  </span>
-          <button onClick={this.sortByDifficulty}>Difficulty</button>
+          {/* <button onClick={this.sortByLanguage}>Language</button> */}
+          {/* <span>  </span> */}
+          {/* <button onClick={this.sortByDifficulty}>Difficulty</button> */}
         </div>
         <div className="list-of-interviews">
           {this.state.selectedInterview && <InterviewItemDetail selectedInterview = {this.state.selectedInterview}/>}
