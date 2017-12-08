@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
+:root {
+  --header-height: 150px;
+}
+
 /* NAVBAR */
 .App {
   max-width: 1280px;
@@ -30,7 +34,7 @@
   float: right;
   display: block;
   text-align: center;
-  font-size: 35px;
+  font-size: 1em;
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -43,10 +47,11 @@
   background-repeat: repeat-x; 
   /* background-size: 30em; */
   background-size: auto 300px;
+  /* background-size: auto var(--header-height); */
   border-radius: 15px;
   padding: 0 20px 20px;
   width: 95%;
-  min-height: 240px;
+  min-height: var(--header-height);
 }
 
 .main p {
@@ -55,7 +60,7 @@
 }
 
 .main .page-header {
-  height: 240px;
+  height: var(--header-height);
   margin-bottom: 16px
 }
 
@@ -63,7 +68,7 @@
   margin: 0;
   padding: 0;
   position: relative;
-  top:140px;
+  top:75px;
 }
 
 h2 {

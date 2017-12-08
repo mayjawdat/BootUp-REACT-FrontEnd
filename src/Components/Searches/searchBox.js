@@ -24,7 +24,7 @@ class SearchBox extends React.Component {
     const result = this
     console.log(this.state.searchTerm)
 
-    axios.post('http://localhost:3001/api/searches', { searchInput: this.state.searchTerm },
+    axios.post('/api/searches', { searchInput: this.state.searchTerm },
       {
         headers: {
           'Access-Control-Allow-Origin': '*',
