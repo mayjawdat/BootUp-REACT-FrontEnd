@@ -175,11 +175,15 @@ li {
   color: #85D0D0;
 }
 
+#filters button:hover {
+  color: #F58B6E;
+}
+
 
 /* USER PROFILE */
 
 .profile-name, .user-profile h3, .user-profile h4 {
-  color: #85d0d0;
+  color: #85D0D0;
 }
 
 .user-profile {
@@ -271,7 +275,7 @@ li {
 
 .interview-list #logo {
   margin-top: none;
-  width: 35px;
+  width: 30px;
 }
 
 
@@ -344,16 +348,16 @@ ul {
   color: white;
   text-decoration: none;
   padding: .5em 1em;
-  background-color: #F58B6E;
+  background-color: #85D0D0;
 }
 
-a {
+/*a {
   text-decoration: none;
 }
 
 a:hover {
   color: #F58B6E;
-}
+}*/
 
 body {
   padding: 0;
