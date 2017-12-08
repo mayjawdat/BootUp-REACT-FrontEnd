@@ -18,7 +18,8 @@ class InterviewForm extends Component {
       url: '/api/interviews',
       data: {interview: submittedValues}
     })
-    .then((response) => console.log(response));
+      .then((response) => window.location.href=`/interviews/${response.data.id}`)
+      .catch(error => console.log("error creating new interview", error))
   }
   
 
@@ -30,11 +31,11 @@ class InterviewForm extends Component {
           { formApi => (
             <form onSubmit={formApi.submitForm} id='newInterviewForm'>
               <label htmlFor="jobTitle">Position:</label>
-              <Text field="jobTitle" id="jobTitle" /><br />
+              <Text field="job_title" id="job_title" /><br />
               <label htmlFor="company">Company:</label>
               <Text field="company" id="company" /><br />
 
-              <RadioGroup field="difficultyRating">
+              <RadioGroup field="difficulty_rating">
                   { group => (
                     <div>
                       How difficult was this company's interview process? <br />
@@ -47,7 +48,7 @@ class InterviewForm extends Component {
                     </div>
                   )}
                 </RadioGroup>
-              <RadioGroup field="experienceRating">
+              <RadioGroup field="experience_rating">
                   { group => (
                     <div>
                       How was your overall experience with this company? <br />
@@ -82,7 +83,7 @@ class InterviewForm extends Component {
                     </div>
                   )}
                 </RadioGroup>
-              <RadioGroup field="acceptOffer">
+              <RadioGroup field="accepted_offer">
                   { group => (
                     <div>
                       Did you accept an offer? <br />
@@ -96,20 +97,20 @@ class InterviewForm extends Component {
 
                 
                 Please detail the steps of the interview process.<br/>
-                <label htmlFor="phoneScreen" className="mr-2">Phone screen</label>
-                <Checkbox field="phoneScreen" id="phoneScreen" className="d-inline-block" /><br/>
+                <label htmlFor="phone_screen" className="mr-2">Phone screen</label>
+                <Checkbox field="phone_screen" id="phone_screen" className="d-inline-block" /><br/>
 
-                <label htmlFor="techScreen" className="mr-2">Tech screen</label>
-                <Checkbox field="techScreen" id="techScreen" className="d-inline-block" /><br/>
+                <label htmlFor="tech_screen" className="mr-2">Tech screen</label>
+                <Checkbox field="tech_screen" id="tech_screen" className="d-inline-block" /><br/>
 
-                <label htmlFor="takeHomeChallenge" className="mr-2">Take-home challenge</label>
-                <Checkbox field="takeHomeChallenge" id="takeHomeChallenge" className="d-inline-block" /><br/>
+                <label htmlFor="take_home_challenge" className="mr-2">Take-home challenge</label>
+                <Checkbox field="take_home_challenge" id="take_home_challenge" className="d-inline-block" /><br/>
 
-                <label htmlFor="onsiteInterview" className="mr-2">On-site interview</label>
-                <Checkbox field="onsiteInterview" id="onsiteInterview" className="d-inline-block" /><br/>
+                <label htmlFor="onsite_interview" className="mr-2">On-site interview</label>
+                <Checkbox field="onsite_interview" id="onsite_interview" className="d-inline-block" /><br/>
 
-                <label htmlFor="whiteboardChallenge" className="mr-2">Whiteboarding challenge</label>
-                <Checkbox field="whiteboardChallenge" id="whiteboardChallenge" className="d-inline-block" /><br/>
+                <label htmlFor="whiteboard_challenge" className="mr-2">Whiteboarding challenge</label>
+                <Checkbox field="whiteboard_challenge" id="whiteboard_challenge" className="d-inline-block" /><br/>
 
                 Please elaborate as needed.<br/>
                 <label htmlFor="phone_screen_details">Phone screen details:</label>
