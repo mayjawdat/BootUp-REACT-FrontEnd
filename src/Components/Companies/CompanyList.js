@@ -47,8 +47,6 @@ class CompanyList extends Component {
     const filteredCompanies = this.state.companies
       // .forEach(company => console.log(company.name))
       .filter(company => company.name && company.name.match(companyRegex))
-    console.log("regex: ", regexString, companyRegex)
-    console.log("filtered: ", filteredCompanies)
     this.setState({filteredCompanies})
   }
 
