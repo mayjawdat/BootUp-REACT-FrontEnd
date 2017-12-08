@@ -85,34 +85,6 @@ li {
   list-style: none;
 }
 
-body {
-  padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.5em;
-}
-
-#search {
-  width: 200px;
-  height: 20px;
-  margin: 5px;
-
-}
-
-#submit {
-  width: 50px;
-  height: 100px;
-  display: run-in;
-}
-
-.row {
-  font-family: source sans pro;
-  margin: 100;
-  display: flex;
-  justify-content: space-around;
-
-}
-
-
 /* INDEX */
 
 .interview-list li {
@@ -197,25 +169,7 @@ ul {
   color: white;
   text-decoration: none;
   padding: .5em 1em;
-  background-color: green;
-}
-
-/*search*/
-
-.search {
-  font-family: source sans pro;
-  margin: 100;
-  display: flex;
-  justify-content: space-around;
-}
-
-.search input {
-  height: 40px;
-  font-size: .75em;
-  font-family: source sans pro;
-  margin: 100;
-  display: flex;
-  justify-content: space-around;
+  background-color: #F58B6E;
 }
 
 .company-location {
@@ -229,4 +183,35 @@ a {
 a:hover {
   color: purple;
 }
+
+body {
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5em;
+}
+
+/*search*/
+
+#search {
+  border-radius: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5em;
+  width: 340px;
+  height: 50px;
+  margin: 5px;
+  position: center;
+  display:inline-block;margin-right:10px;
+}
+
+#submit-button  {
+  background-color: #85D0D0;
+  margin-top: 20px;
+  margin-left: 15px;
+  width: 45px;
+  height: 50px;
+  display:inline-block;
+  cursor: pointer;
+}
+
+
 
