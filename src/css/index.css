@@ -182,7 +182,7 @@ body {
 }
 
 .interview-list li , .company-list li{
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .interview-list p, .company-list p {
@@ -278,6 +278,53 @@ body {
 
 #add-button img {
   size: 2px;
+}
+
+
+/* INTERVIEW SHOW */
+
+.interview-list span {
+  text-align: center;
+}
+
+.interview-list li {
+  /*float: left;*/
+}
+
+.interview-list h3 {
+  margin-bottom: 4px;
+}
+
+.interview-list #logo {
+  margin-top: none;
+  width: 35px;
+}
+
+
+.interview-list #logo-desc {
+  font-family: source sans pro;
+  font-size: 25px;
+}
+
+
+/* COMPANY SHOW */
+
+.company-interview-list span {
+  text-align: center;
+}
+
+.company-interview-list li {
+  /*float: left;*/
+}
+
+.company-interview-list #logo {
+  margin-top: none;
+  width: 25px;
+}
+
+.company-interview-list #logo-desc {
+  font-family: source sans pro;
+  font-size: 25px; 
 }
 
 
