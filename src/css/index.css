@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 :root {
-  --header-height: 150px;
+  --header-height: 200px;
 }
 
 /* NAVBAR */
@@ -60,6 +60,11 @@
   background-color: #CFCFCE;
 }
 
+#linkedin-login {
+  margin-top: 2em;
+  text-align: center;
+}
+
 #linkedin-login a {
   text-decoration: none;
   color: white;
@@ -69,14 +74,19 @@
   color: #FEEC9E;
 }
 
-
 /* MAIN PAGE LAYOUT */
+.main li, .main ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 .main {
   background-image: url("../Images/banner.png");
   background-repeat: repeat-x; 
+  background-color: #f4f4f4;
   /* background-size: 30em; */
-  background-size: auto 300px;
+  background-size: auto 200px;
   /* background-size: auto var(--header-height); */
   border-radius: 15px;
   padding: 0 20px 20px;
@@ -98,7 +108,7 @@
   margin: 0;
   padding: 0;
   position: relative;
-  top:75px;
+  top: 105px;
 }
 
 h2 {
@@ -162,16 +172,32 @@ body {
 
 /* USER PROFILE */
 
+.profile-name, .user-profile h3, .user-profile h4 {
+  color: #85d0d0;
+}
+
+.user-profile {
+  text-align: center;
+}
+
+.user-profile h2, .user-profile h3, .user-profile h4 {
+  margin: 0;
+
+}
+
 .user-profile #photo {
   padding-top: 20px;
   background-image: url("../Images/defaultProfile.png");
-  width: 400px;
+  /* width: 400px; */
   text-align: center;
-  background-size: cover;
+  background-size: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center 20px;
 }
 
 .user-profile #photo img {
-  margin: 0 auto;
+  margin: 20px auto;
   width: 200px;
   height: auto;
 }
@@ -189,6 +215,20 @@ body {
   margin: 0 auto;
   border-radius: 25px;
   background-color: #9E9D9E;
+}
+
+.profile-links {
+  margin-top: 20px;
+}
+
+.profile-interview-list {
+  margin-top:30px;
+  padding-top: 20px;
+  border-top: 1px solid gray;
+}
+
+.profile-interview-list h3 {
+  margin-bottom: 20px;
 }
 
 #add-button a {
