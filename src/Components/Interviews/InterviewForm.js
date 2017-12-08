@@ -25,14 +25,10 @@ class InterviewForm extends Component {
   render() {
     return (
       <div>
+        <div className="page-header"><h2>Interview Info</h2></div>
         <Form onSubmit={submittedValues =>  this.handleSubmit(submittedValues)}>
           { formApi => (
             <form onSubmit={formApi.submitForm} id='newInterviewForm'>
-              <label htmlFor="user_id">userid:</label>
-              <Text field="user_id" id="user_id" /><br />
-              <label htmlFor="company_id">companyid:</label>
-              <Text field="company_id" id="company_id" /><br />
-
               <label htmlFor="jobTitle">Position:</label>
               <Text field="jobTitle" id="jobTitle" /><br />
               <label htmlFor="company">Company:</label>
