@@ -6,6 +6,7 @@ const onCompanySelectCheck = (company) => {
 }
 
 const CompanyListItem = ({company}) => {
+console.log(company)
   return (
     <li>
       <Link to={`/companies/${company.id}`}> {company.name} </Link>
