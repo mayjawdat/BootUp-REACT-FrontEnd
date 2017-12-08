@@ -42,7 +42,7 @@
   background-image: url("../Images/banner.png");
   background-repeat: repeat-x; 
   /* background-size: 30em; */
-  background-size: auto 240px;
+  background-size: auto 300px;
   border-radius: 15px;
   padding: 0 20px 20px;
   width: 95%;
@@ -130,14 +130,20 @@ body {
 .user-profile #photo {
   padding-top: 20px;
   background-image: url("../Images/defaultProfile.png");
-  width: 300px;
+  width: 400px;
   text-align: center;
+  background-size: cover;
 }
 
-#photo img {
+.user-profile #photo img {
   margin: 0 auto;
-  width: 300px;
+  width: 200px;
   height: auto;
+}
+
+.user-profile #logo {
+  margin-top: none;
+  width: 50px;
 }
 
 .user-profile #add-button {
