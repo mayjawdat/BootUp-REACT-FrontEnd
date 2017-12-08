@@ -7,8 +7,8 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
+          <div><Link to="/interviews"><img id="logo" src={BootUpLogo2} /></Link></div>
         <nav>
-          <li><Link to="/interviews"><img id="logo" src={BootUpLogo2} /></Link></li>
           <ul id="links">
             {this.props.current_user 
               ? <li><Link to={`/users/${this.props.current_user.id}`}>{`${this.props.current_user.name}`}</Link></li>
