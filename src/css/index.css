@@ -13,14 +13,21 @@
 
 .header {
   background-color: white;
-  height: 95px;
-  /* padding-bottom: 2em; */
+  min-height: 95px;
   width: 98%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+  }
 }
 
 .header #logo {
   width: 250px;
-  float: left;
+  /* float: left; */
   padding-left: 30px;
 }
 
@@ -32,8 +39,8 @@
 }
 
 .header #links li {
-  float: right;
-  display: block;
+  /* float: right; */
+  display: inline-block;
   text-align: center;
   font-size: 1em;
   padding: 14px 16px;
