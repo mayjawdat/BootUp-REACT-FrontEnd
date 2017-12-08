@@ -301,6 +301,22 @@ li {
   font-size: 25px; 
 }
 
+.company-location {
+  font-size: .75em;
+}
+
+.company-filter {
+  width: 50%;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  border-radius: 5%;
+  border: none;
+  /* padding: 20px; */
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
 
 /* FOOTER */
 
@@ -329,10 +345,6 @@ ul {
   text-decoration: none;
   padding: .5em 1em;
   background-color: #F58B6E;
-}
-
-.company-location {
-  font-size: .75em;
 }
 
 a {
@@ -465,8 +477,6 @@ body {
 
 label #phone_screen_details {
   margin-left: 20px;
-
-
 }
 
 #tech_screen_details {
@@ -502,19 +512,5 @@ label #phone_screen_details {
 .mb-4 btn btn-primary {
   background-color: #85D0D0;
   text-color: white;
-}
-
-.company-location {
-  font-size: .75em;
-.company-filter {
-  width: 50%;
-  font-size: 1.25em;
-  line-height: 1.25em;
-  border-radius: 5%;
-  border: none;
-  /* padding: 20px; */
-  display: block;
-  margin: 0 auto;
-  text-align: center;
 }
 
