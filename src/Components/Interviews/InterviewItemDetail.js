@@ -60,7 +60,7 @@ render() {
             </div>
         </div>
         );
-}
+    }
 }
 
 export default InterviewItemDetail;
