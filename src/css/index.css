@@ -298,3 +298,16 @@ ul {
 .company-location {
   font-size: .75em;
 }
+
+.company-filter {
+  width: 50%;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  border-radius: 5%;
+  border: none;
+  /* padding: 20px; */
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
