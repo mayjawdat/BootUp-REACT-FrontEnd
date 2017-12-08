@@ -57,9 +57,6 @@ class UserProfile extends Component {
   render() {
     return (
       <div className="user-profile">
-        <div className="page-header">
-          <h2>Profile</h2>
-        </div>
         <div id="photo">
              <img id="logo" src={this.state.user.photo_url ? this.state.user.photo_url : defaultProfile } />}
         </div>

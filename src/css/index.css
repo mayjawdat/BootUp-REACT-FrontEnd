@@ -130,13 +130,13 @@ body {
 .user-profile #photo {
   padding-top: 20px;
   background-image: url("../Images/defaultProfile.png");
-  width: 50%;
+  width: 300px;
   text-align: center;
 }
 
 #photo img {
   margin: 0 auto;
-  width: 532px;
+  width: 300px;
   height: auto;
 }
 

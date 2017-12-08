@@ -43,7 +43,17 @@ class InterviewList extends Component {
   }
 
   sortByCompany() {
-    // return this.state.interviews.companies.sort()
+    const interviews = this.state.interviews.sort((interviewOne, interviewTwo) => {
+        if (interviewOne.company.name < interviewTwo.company.name) {
+          return - 1
+        } 
+        if (interviewOne.company.name > interviewTwo.company.name) {
+          return 1
+        }
+        return 0 // both same 
+      }
+    )
+    this.setState({interviews})
   }
 
   sortByLanguage() {
@@ -51,7 +61,18 @@ class InterviewList extends Component {
   }
 
   sortByDifficulty() {
-
+    // const interviews = this.state.interviews.sort((interviewOne, interviewTwo) => {
+    //   return interviewOne.difficulty_rating < interviewTwo.difficulty_rating
+    // })
+    // this.setState({interviews})
+    // for(1..3), find first interview with given difficulty
+    let interviews = []
+    for(const i of [1,2,3]){
+      interviews.push(this.state.interviews.find((interview) => {
+        interview.difficulty_rating == i
+      })
+    )}
+    this.setState({interviews})
   }
 
   render() {
