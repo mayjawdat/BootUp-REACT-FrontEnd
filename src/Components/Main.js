@@ -9,6 +9,9 @@ import UserProfile from './Users/UserProfile'
 import CompanyProfile from './Companies/CompanyProfile'
 import UserLogin from './Login/userLogin'
 import CompanyItemDetail from './Companies/CompanyItemDetail'
+import InterviewItemDetail from './Interviews/InterviewItemDetail'
+
+
 
 class Main extends Component {
 
@@ -18,6 +21,7 @@ class Main extends Component {
         <Switch>
           <Route exact path='/interviews' component={InterviewList} />
           <Route exact path='/interviews/new' component={InterviewForm} />
+          <Route exact path='/interviews/:id' component={InterviewItemDetail} />
           <Route exact path='/companies' component={CompanyList} />
           <Route exact path='/' component={HomePage} />
           <Route exact path='/search' component={SearchBox} />
