@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import greenPwrBtn from '../../Images/greenPwrBtn.png'
+import redPwrBtn from '../../Images/redPwrBtn.png'
+import yellowPwrBtn from '../../Images/yellowPwrBtn.png'
 
 class InterviewItemDetail extends Component {
     constructor(props){
@@ -19,86 +22,35 @@ class InterviewItemDetail extends Component {
         return (
             <div className="interview-item-detail">
                 <div className="page-header">
-                    <h2>
-                        <p> {this.state.interview.job_title} </p>
-                    </h2>
+                    <h2>{this.state.interview.job_title}</h2>
+
+                    <p>{this.state.interview.created_at}</p>
                 </div>
                 <div className="interview-list">
-                    <p> Referred?
-                        {
-                            this.state.interview.referred ?
-                            <span> yes </span> : <span> no </span>
-                        }
-                    </p>
-                    <p> Received offer?
-                        {
-                            this.state.interview.received_offer ?
-                            <span> yes </span> : <span> no </span>
-                        }
-                    </p>
-                    <p> Notes:
-                        {this.state.interview.notes}
-                    </p>
-                    <p>
-                        {this.state.interview.difficulty_rating}
-                    </p>
-                    <p>
-                        {this.state.interview.experience_rating}
-                    </p>
-                    <p> Accepted offer?
-                        {
-                            this.state.interview.accepted_offer ?
-                            <span> yes </span> : <span> no </span>
-                        }
-                    </p>
-                    <p> Phone screen?
-                        {
-                            this.state.interview.phone_screen ?
-                            <span> yes </span> : <span> no </span>
-                        }
-                    </p>
-                    <p> Phone screen details:
-                        {this.state.interview.phone_screen_details}
-                    </p>
-                    <p> Tech screen?
-                        {
-                            this.state.interview.tech_screen ?
-                            <span> yes </span> : <span> no </span>
-                        }
-                    </p>
-                    <p> Tech screen details:
-                        {this.state.interview.tech_screen_details}
-                    </p>
-                    <p> Take home challenge?
-                        {
-                            this.state.interview.take_home_challenge ?
-                            <span> yes </span> : <span> no </span>
-                        }
-                    </p>
-                    <p> Take home challenge details:
-                        {this.state.interview.take_home_challenge_details}
-                    </p>
-                    <p> On site interview?
-                        {
-                            this.state.interview.onsite ?
-                            <span> yes </span> : <span> no </span>
-                        }
-                    </p>
-                    <p> On site details:
-                        {this.state.interview.onsite_details}
-                    </p>
-                    <p> Whiteboarding?
-                        {
-                            this.state.interview.whiteboarding ?
-                            <span> yes </span> : <span> no </span>
-                        }
-                    </p>
-                    <p> Whiteboarding details:
-                        {this.state.interview.whiteboarding_details}
-                    </p>
-                    <p> Negotiation details:
-                        {this.state.interview.negotiation_details}
-                    </p>
+                    <ul>
+                        {this.state.interview.referred && <li><img id="logo" src={greenPwrBtn} /> Referred</li>}
+                        {this.state.interview.accepted_offer && <li><img id="logo" src={greenPwrBtn} /> Accepted Offer</li>}
+                        {!this.state.interview.accepted_offer && <li><img id="logo" src={redPwrBtn} /> Declined Offer</li>}
+                        {this.state.interview.notes && <li>Notes: {this.state.interview.notes} </li>}
+                        {this.state.interview.difficulty_rating === 1 && <li><img id="logo" src={greenPwrBtn} /> Easy Interview</li>}
+                        {this.state.interview.difficulty_rating === 2 && <li><img id="logo" src={yellowPwrBtn} /> Challenging Interview</li>}
+                        {this.state.interview.difficulty_rating === 3 && <li><img id="logo" src={redPwrBtn} /> Difficult Interview</li>}
+                        {this.state.interview.experience_rating === 1 && <li><img id="logo" src={redPwrBtn} /> Negative Experience</li>}
+                        {this.state.interview.experience_rating === 2 && <li><img id="logo" src={yellowPwrBtn} /> Neutral Experience</li>}
+                        {this.state.interview.experience_rating === 3 && <li><img id="logo" src={greenPwrBtn} /> Positive Experience</li>}
+                        {this.state.interview.phone_screen && <h3>Phone Screen</h3>}
+                        {this.state.interview.phone_screen && <li>{this.state.interview.phone_screen_details} </li>}
+                        {this.state.interview.tech_screen && <h3>Tech Screen</h3>}
+                        {this.state.interview.tech_screen && <li>{this.state.interview.tech_screen_details} </li>}
+                        {this.state.interview.take_home_challenge && <h3>Take Home Challenge</h3>}
+                        {this.state.interview.take_home_challenge && <li>{this.state.interview.take_home_challenge_details} </li>}
+                        {this.state.interview.onsite && <h3>On Site Interview</h3>}
+                        {this.state.interview.onsite && <li>{this.state.interview.onsite_details} </li>}
+                        {this.state.interview.whiteboarding && <h3>Whiteboarding</h3>}
+                        {this.state.interview.whiteboarding && <li>{this.state.interview.whiteboarding_details} </li>}
+                        {this.state.interview.negotiation_details && <h3>Negotiation</h3>}
+                        {<li>{this.state.interview.negotiation_details} </li>}
+                    </ul>
                 </div>
             </div>
         );

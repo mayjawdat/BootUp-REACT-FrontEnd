@@ -40,7 +40,7 @@
 
 .main {
   background-image: url("../Images/banner.png");
-  background-repeat: repeat-x; 
+  background-repeat: repeat-x;
   /* background-size: 30em; */
   background-size: auto 240px;
   border-radius: 15px;
@@ -208,4 +208,3 @@ a {
 a:hover {
   color: purple;
 }
-
