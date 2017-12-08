@@ -10,6 +10,8 @@ import CompanyProfile from './Companies/CompanyProfile'
 import UserLogin from './Login/userLogin'
 import CompanyItemDetail from './Companies/CompanyItemDetail'
 import InterviewItemDetail from './Interviews/InterviewItemDetail'
+import Login from './Sessions/Login'
+import Logout from './Sessions/Logout'
 
 
 
@@ -28,6 +30,8 @@ class Main extends Component {
           <Route exact path='/users/:id' component={UserProfile} />
           <Route exact path='/login' component={UserLogin} />
           <Route exact path='/companies/:id' component={CompanyItemDetail} />
+          <Route exact path='/api/auth/linkedin' component={Login} />
+          <Route exact path='/api/logout' component={Logout} />
         </Switch>
       </div>
     )
