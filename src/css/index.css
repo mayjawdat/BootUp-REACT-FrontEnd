@@ -213,5 +213,132 @@ body {
   cursor: pointer;
 }
 
+/*new interview form*/
+
+#jobTitle {
+  border-radius: 15px;
+  margin: 10px;
+}
+
+#company {
+  border-radius: 15px;
+  margin: 10px;
+}
+
+#easy {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#average {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#difficult {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+.mr-2 {
+  border-radius: 15px;
+  margin-left: 20px;
+}
+
+#negative {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#neutral {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#positive {
+  border-radius: 15px;
+  margin-left: 15px;
+}
 
 
+#yes {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+
+#no {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#phoneScreen {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#techScreen {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#takeHomeChallenge {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#onsiteInterview {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#whiteboardChallenge {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#phone_screen_details {
+  margin-left: 15px;
+  border-radius: 15px;
+
+}
+
+label #phone_screen_details {
+  margin-left: 20px;
+
+
+}
+
+#tech_screen_details {
+    border-radius: 15px;
+    margin-left: 15px;
+}
+
+#take_home_challenge_details {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#onsite_details {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#whiteboarding_details {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#negotiation_details {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#notes {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+.mb-4 btn btn-primary {
+  background-color: #85D0D0;
+  text-color: white;
+}
