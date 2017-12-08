@@ -57,7 +57,7 @@
   color: white;
   text-decoration: none;
   padding: .5em 1em;
-  background-color: #CFCFCE;
+  background-color: #85D0D0;
 }
 
 #linkedin-login {
@@ -83,7 +83,7 @@
 
 .main {
   background-image: url("../Images/banner.png");
-  background-repeat: repeat-x; 
+  background-repeat: repeat-x;
   background-color: #f4f4f4;
   /* background-size: 30em; */
   background-size: auto 200px;
@@ -156,9 +156,34 @@ body {
 
 
 /* INDEX */
+.interview-list-item, .company-list-item {
+  margin-top: 18px;
+}
 
-.interview-list li {
+.interview-list-item a, .company-list-item a {
+  text-decoration: none;
+}
+
+.interview-list-item a:hover, .company-list-item a:hover {
+  color: #F58B6E;
+}
+
+.list-of-interviews {
+  margin-top: 20px;
+  border-top: 1px solid #CFCFCE;
+  padding-top: 16px;
+}
+
+.interview-list li , .company-list li{
   text-align: center;
+}
+
+.interview-list p, .company-list p {
+  margin-bottom: 12px;
+}
+
+.list-label {
+  font-weight: bold;
 }
 
 #filters {
@@ -273,4 +298,3 @@ ul {
 .company-location {
   font-size: .75em;
 }
-

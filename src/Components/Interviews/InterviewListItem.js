@@ -5,7 +5,9 @@ const InterviewListItem = ({interview}) => {
     return (
         <div>
             <li>
-              <Link to={`/interviews/${interview.id}`}> Interview for {interview.job_title} position </Link>
+              <Link to={`/interviews/${interview.id}`}>
+               {interview.job_title} at {interview.company.name} 
+              </Link>
             </li>
         </div>
     );

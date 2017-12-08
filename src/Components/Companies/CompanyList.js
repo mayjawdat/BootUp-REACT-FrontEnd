@@ -18,10 +18,12 @@ class CompanyList extends Component {
 
   companyItems() {
     return this.state.companies.map(company => (
+      <div className="company-list-item">
         <CompanyListItem
           // onCompanySelect = {selectedCompany => this.setState({selectedCompany})}
           key={company.id}
           company={company} />
+          </div>
       )
     )
   }
@@ -37,10 +39,11 @@ class CompanyList extends Component {
         <div className="page-header">
           <h2>Company List</h2>
         </div>
-        
-        <ul>
-          {this.companyItems()}
-        </ul>
+        <div className='list-of-companies'>
+          <ul>
+            {this.companyItems()}
+          </ul>
+        </div>
       </div>
     )
   }

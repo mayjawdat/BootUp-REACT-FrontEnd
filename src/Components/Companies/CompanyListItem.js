@@ -8,8 +8,8 @@ const onCompanySelectCheck = (company) => {
 const CompanyListItem = ({company}) => {
 console.log(company)
   return (
-    <li>
-      <Link to={`/companies/${company.id}`}> {company.name} </Link>
+    <li className="company-list-item">
+      <Link to={`/companies/${company.id}`}> {company.name} - {company.interviews.length} interview{company.interviews.length > 1 && 's'}</Link>
     </li>
   );
 };
@@ -25,4 +25,3 @@ export default CompanyListItem;
 //     </div>
 //   );
 // };
-
