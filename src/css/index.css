@@ -5,6 +5,7 @@
 }
 
 /* NAVBAR */
+
 .App {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,6 +40,35 @@
   text-decoration: none;
 }
 
+.header a {
+  text-decoration: none;
+  color: #85D0D0;
+}
+
+.header a:hover {
+  color: #F58B64;
+}
+
+
+/*  HOMEPAGE */
+
+.link-button {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 1em;
+  background-color: #CFCFCE;
+}
+
+#linkedin-login a {
+  text-decoration: none;
+  color: white;
+}
+
+#linkedin-login a:hover {
+  color: #FEEC9E;
+}
+
 
 /* MAIN PAGE LAYOUT */
 
@@ -46,7 +76,8 @@
   background-image: url("../Images/banner.png");
   background-repeat: repeat-x; 
   /* background-size: 30em; */
-  background-size: auto var(--header-height);
+  background-size: auto 300px;
+  /* background-size: auto var(--header-height); */
   border-radius: 15px;
   padding: 0 20px 20px;
   width: 95%;
@@ -134,14 +165,20 @@ body {
 .user-profile #photo {
   padding-top: 20px;
   background-image: url("../Images/defaultProfile.png");
-  width: 50%;
+  width: 400px;
   text-align: center;
+  background-size: cover;
 }
 
-#photo img {
+.user-profile #photo img {
   margin: 0 auto;
-  width: 532px;
+  width: 200px;
   height: auto;
+}
+
+.user-profile #logo {
+  margin-top: none;
+  width: 50px;
 }
 
 .user-profile #add-button {
@@ -193,23 +230,7 @@ ul {
   width: 150px;
 }
 
-.link-button {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  padding: .5em 1em;
-  background-color: green;
-}
-
 .company-location {
   font-size: .75em;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: purple;
 }
 
