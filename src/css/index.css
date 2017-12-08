@@ -5,6 +5,7 @@
 }
 
 /* NAVBAR */
+
 .App {
   max-width: 1280px;
   margin: 0 auto;
@@ -37,6 +38,35 @@
   font-size: 1em;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+.header a {
+  text-decoration: none;
+  color: #85D0D0;
+}
+
+.header a:hover {
+  color: #F58B64;
+}
+
+
+/*  HOMEPAGE */
+
+.link-button {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 1em;
+  background-color: #CFCFCE;
+}
+
+#linkedin-login a {
+  text-decoration: none;
+  color: white;
+}
+
+#linkedin-login a:hover {
+  color: #FEEC9E;
 }
 
 
@@ -200,23 +230,7 @@ ul {
   width: 150px;
 }
 
-.link-button {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  padding: .5em 1em;
-  background-color: green;
-}
-
 .company-location {
   font-size: .75em;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: purple;
 }
 
