@@ -10,7 +10,7 @@ class InterviewList extends Component {
 
     this.state = {
       interviews: [],
-      selectedInterview: 'Loading...'
+      selectedInterview: null
     }
 
     this.sortByRecent = this.sortByRecent.bind(this)
@@ -27,10 +27,12 @@ class InterviewList extends Component {
   interviewItems() {
     return this.state.interviews.map(interview => (
       // console.log(interview)
-      <InterviewListItem
-      onInterviewSelect = {selectedInterview => this.setState({selectedInterview})}
-      key={interview.id} 
-      interview={interview} />
+      <div className="interview-list-item" key={interview.id}>
+        <InterviewListItem
+          onInterviewSelect = {selectedInterview => this.setState({selectedInterview})}
+          interview={interview}
+        />
+      </div>
     ))
   }
 
@@ -43,7 +45,17 @@ class InterviewList extends Component {
   }
 
   sortByCompany() {
-    // return this.state.interviews.companies.sort()
+    const interviews = this.state.interviews.sort((interviewOne, interviewTwo) => {
+        if (interviewOne.company.name < interviewTwo.company.name) {
+          return - 1
+        }
+        if (interviewOne.company.name > interviewTwo.company.name) {
+          return 1
+        }
+        return 0 // both same
+      }
+    )
+    this.setState({interviews})
   }
 
   sortByLanguage() {
@@ -51,7 +63,18 @@ class InterviewList extends Component {
   }
 
   sortByDifficulty() {
-
+    // const interviews = this.state.interviews.sort((interviewOne, interviewTwo) => {
+    //   return interviewOne.difficulty_rating < interviewTwo.difficulty_rating
+    // })
+    // this.setState({interviews})
+    // for(1..3), find first interview with given difficulty
+    let interviews = []
+    for(const i of [1,2,3]){
+      interviews.push(this.state.interviews.find((interview) => {
+        interview.difficulty_rating == i
+      })
+    )}
+    this.setState({interviews})
   }
 
   render() {
@@ -69,10 +92,12 @@ class InterviewList extends Component {
           <span>  </span>
           <button onClick={this.sortByDifficulty}>Difficulty</button>
         </div>
-        <InterviewItemDetail selectedInterview = {this.state.selectedInterview}/>
-        <ul>
-          {this.interviewItems()}
-        </ul>
+        <div className="list-of-interviews">
+          {this.state.selectedInterview && <InterviewItemDetail selectedInterview = {this.state.selectedInterview}/>}
+          <ul>
+            {this.interviewItems()}
+          </ul>
+        </div>
       </div>
     )
   }

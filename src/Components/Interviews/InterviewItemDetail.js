@@ -4,19 +4,24 @@ import greenPwrBtn from '../../Images/greenPwrBtn.png'
 import redPwrBtn from '../../Images/redPwrBtn.png'
 import yellowPwrBtn from '../../Images/yellowPwrBtn.png'
 
+const experienceRatings = ['Poor', 'Neutral', 'Good']
+const difficultyRatings = ['Easy', 'Medium', 'Hard']
 class InterviewItemDetail extends Component {
-    constructor(props){
-        super()
+  constructor(props){
+    super()
+    this.interviewId = this.props ? this.props.match.params.id : null
 
-        this.state = {
-            interview: {}
-        }
+    this.state = {
+      interview: {
+        company: {}
+      }
     }
+  }
 
-    componentDidMount(){
-        axios.get(`/api/interviews/${this.props.match.params.id}`)
-            .then(({data}) => this.setState({interview: data}))
-    }
+  componentDidMount(){
+    axios.get(`/api/interviews/${this.props.match.params.id}`)
+    .then(({data}) => this.setState({interview: data}))
+  }
 
     render() {
         return (
@@ -54,7 +59,7 @@ class InterviewItemDetail extends Component {
                 </div>
             </div>
         );
+      }
     }
-}
 
 export default InterviewItemDetail;
