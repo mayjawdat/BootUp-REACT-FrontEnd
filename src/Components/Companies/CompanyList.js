@@ -18,12 +18,13 @@ class CompanyList extends Component {
 
   companyItems() {
     return this.state.companies.map(company => (
-      <div className="company-list-item">
+      <div className="company-list-item" key={company.index}>
         <CompanyListItem
-          // onCompanySelect = {selectedCompany => this.setState({selectedCompany})}
+          onCompanySelect = {selectedCompany => this.setState({selectedCompany})}
           key={company.id}
-          company={company} />
-          </div>
+          company={company} 
+        />
+      </div>
       )
     )
   }
