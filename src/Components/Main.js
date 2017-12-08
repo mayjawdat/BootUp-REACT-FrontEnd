@@ -8,15 +8,11 @@ import SearchBox from './Searches/searchBox'
 import UserProfile from './Users/UserProfile'
 import UserLogin from './Login/userLogin'
 import CompanyItemDetail from './Companies/CompanyItemDetail'
-<<<<<<< HEAD
 import CompanyProfile from './Companies/CompanyProfile'
-=======
 import InterviewItemDetail from './Interviews/InterviewItemDetail'
 import Login from './Sessions/Login'
 import Logout from './Sessions/Logout'
 
-
->>>>>>> 0eedf8e808a75999b185ca5fb32cd76ba4f0f941
 
 class Main extends Component {
 
@@ -34,12 +30,9 @@ class Main extends Component {
           <Route exact path='/companies/:id' component={CompanyProfile} />
           <Route exact path='/login' component={UserLogin} />
           <Route exact path='/companies/:id' component={CompanyItemDetail} />
-<<<<<<< HEAD
           <Route exact path='/login' component={UserLogin} />
-=======
           <Route exact path='/api/auth/linkedin' component={Login} />
           <Route exact path='/api/logout' component={Logout} />
->>>>>>> 0eedf8e808a75999b185ca5fb32cd76ba4f0f941
         </Switch>
       </div>
     )

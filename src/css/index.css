@@ -84,10 +84,7 @@
 .main {
   background-image: url("../Images/banner.png");
   background-repeat: repeat-x;
-<<<<<<< HEAD
-=======
   background-color: #f4f4f4;
->>>>>>> 0eedf8e808a75999b185ca5fb32cd76ba4f0f941
   /* background-size: 30em; */
   background-size: auto 200px;
   /* background-size: auto var(--header-height); */
@@ -269,7 +266,6 @@ ul {
   width: 150px;
 }
 
-<<<<<<< HEAD
 .link-button {
   display: inline-block;
   color: white;
@@ -302,7 +298,7 @@ body {
   border-radius: 15px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5em;
-  width: 340px;
+  width: 370px;
   height: 50px;
   margin: 5px;
   position: center;
@@ -321,7 +317,7 @@ body {
 
 /*new interview form*/
 
-#jobTitle {
+#job_title {
   border-radius: 15px;
   margin: 10px;
 }
@@ -448,8 +444,8 @@ label #phone_screen_details {
   background-color: #85D0D0;
   text-color: white;
 }
-=======
+
 .company-location {
   font-size: .75em;
 }
->>>>>>> 0eedf8e808a75999b185ca5fb32cd76ba4f0f941
+
