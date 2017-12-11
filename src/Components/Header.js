@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import BootUpLogo2 from '../Images/BootUpLogo2.png';
 
-
 class Header extends Component {
   render() {
     return (
@@ -11,9 +10,9 @@ class Header extends Component {
         <nav>
           <ul id="links">
             {this.props.current_user && <li><Link to={`/users/${this.props.current_user.id}`}>{`${this.props.current_user.name}`}</Link></li>}
-            {/* <li><Link to="/">Resources</Link></li> */}
-            <li><Link to="/companies">Companies</Link></li>
-            <li><Link to="/search">Search</Link></li>
+            {this.props.current_user && <li><Link to="/companies">Companies</Link></li>}
+            {this.props.current_user && <li><Link to="/">Resources</Link></li>}
+            {/*<li><Link to="/search">Search</Link></li>*/}
             {this.props.current_user && <li><a href='/api/logout'>Logout</a></li>}
           </ul>
         </nav>
