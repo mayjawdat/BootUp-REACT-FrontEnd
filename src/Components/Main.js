@@ -13,7 +13,6 @@ import InterviewItemDetail from './Interviews/InterviewItemDetail'
 import Login from './Sessions/Login'
 import Logout from './Sessions/Logout'
 
-
 class Main extends Component {
 
   render() {
