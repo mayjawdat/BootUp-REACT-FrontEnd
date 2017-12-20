@@ -1,6 +1,6 @@
 # BootUp-REACT-FrontEnd
 
-BootUp [API](https://github.com/DBC-BootUp/BootUp-API/)
+## BootUp [API](https://github.com/DBC-BootUp/BootUp-API/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
