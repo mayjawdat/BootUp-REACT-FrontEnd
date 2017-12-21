@@ -1,4 +1,4 @@
-![BootUpLogo](/src/images/BootUpLogo2.png "BootUpLogo")
+![BootUpLogo](/src/Images/BootUpLogo2.png "BootUpLogo")
 
 # BootUp-REACT-FrontEnd
 
