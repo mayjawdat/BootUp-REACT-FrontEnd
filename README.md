@@ -6,7 +6,9 @@
 
 ![](/src/images/BootUpLogo2.png "")
 
-![InterviewReviews](/public/mockups/bootUp_mockUp_interviewReviews.png "InterviewReviews")
+![InterviewReviews](/public/mockups/bootUp_mockUp_interviewReviews.png InterviewReviews)
+<img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_interviewReview.png" width="250" />
+
 
 ![InterviewReview](/public/mockups/bootUp_mockUp_interviewReview.png "InterviewReview")
 
