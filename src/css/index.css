@@ -137,6 +137,7 @@ li {
 
 
 /* INDEX */
+
 .interview-list-item, .company-list-item {
   margin-top: 18px;
 }
@@ -172,10 +173,12 @@ li {
 }
 
 #filters button {
+  background-color: white;
   color: #85D0D0;
 }
 
 #filters button:hover {
+  background-color: white;
   color: #F58B6E;
 }
 
@@ -250,8 +253,8 @@ li {
 }
 
 #add-button a img {
-  height: 30px;
-  width: 30px;
+  height: 15px;
+  width: 15px;
 }
 
 #add-button img {

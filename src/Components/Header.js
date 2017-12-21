@@ -12,7 +12,7 @@ class Header extends Component {
             {!this.props.current_user && <li><a href="/">Login/Sign-Up</a></li>}
             {this.props.current_user && <li><Link to={`/users/${this.props.current_user.id}`}>{`${this.props.current_user.name}`}</Link></li>}
             {this.props.current_user && <li><Link to="/companies">Companies</Link></li>}
-            {this.props.current_user && <li><Link to="/">Resources</Link></li>}
+            {this.props.current_user && <li><Link to="/interviews">Resources</Link></li>}
             {/*<li><Link to="/search">Search</Link></li>*/}
             {this.props.current_user && <li><a href='/api/logout'>Logout</a></li>}
           </ul>

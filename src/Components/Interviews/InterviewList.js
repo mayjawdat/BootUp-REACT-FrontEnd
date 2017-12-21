@@ -68,13 +68,13 @@ class InterviewList extends Component {
     // })
     // this.setState({interviews})
     // for(1..3), find first interview with given difficulty
-    let interviews = []
-    for(const i of [1,2,3]){
-      interviews.push(this.state.interviews.find((interview) => {
-        interview.difficulty_rating == i
-      })
-    )}
-    this.setState({interviews})
+    // let interviews = []
+    // for(const i of [1,2,3]){
+    //   interviews.push(this.state.interviews.find((interview) => {
+    //     interview.difficulty_rating == i
+    //   })
+    // )}
+    // this.setState({interviews})
   }
 
   render() {

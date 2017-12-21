@@ -82,13 +82,13 @@ class UserProfile extends Component {
         <h3>Interviews</h3>
         <ul>
           {this.interviewItems()}
-            <button id="add-button"><Link id="add-interview" to="/interviews/new"><img id="plus" src={plusSign} /> Add Interview</Link></button>
+            <button id="add-button"><Link id="add-interview" to="/interviews/new"><img id="plus" src={plusSign} />Add Interview</Link></button>
         </ul>
         <br />
         <h3>Resources</h3>
         <ul>
           {this.interviewItems()}
-            <button id="add-button"><Link id="add-resource" to="/resources/new"><img id="plus" src={plusSign} /> Add Resource</Link></button>
+            <button id="add-button"><Link id="add-resource" to="/resources/new"><img id="plus" src={plusSign} />Add Resource</Link></button>
         </ul>
       </div>
       </div>
