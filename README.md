@@ -1,6 +1,8 @@
-![BootUpLogo](/src/Images/BootUpLogo2.png "BootUpLogo")
+(NOT)![BootUpLogo](/src/Images/BootUpLogo2.png "BootUpLogo")
 
-# BootUp-REACT-FrontEnd
+<img src="https://github.com/DBC-BootUp/BootUp-API/blob/development/BootUpLogo2.png" width="250" />
+
+## BootUp-REACT-FrontEnd
 
 ### BootUp [API](https://github.com/DBC-BootUp/BootUp-API/)
 
