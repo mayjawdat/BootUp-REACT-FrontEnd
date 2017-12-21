@@ -1,4 +1,4 @@
-(NOT)![BootUpLogo](/src/images/BootUpLogo2.png "BootUpLogo")
+![](/src/images/BootUpLogo2.png "")
 
 <img src="https://github.com/DBC-BootUp/BootUp-API/blob/development/BootUpLogo2.png" width="250" />
 
