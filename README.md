@@ -6,13 +6,12 @@
 
 ![](/src/images/BootUpLogo2.png "")
 
-!![InterviewReviews](/public/mockups/bootUp_mockUp_interviewReviews.png InterviewReviews)
-<img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_interviewReview.png" width="250" />
+<img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_interviewReview.png" width="400" />
 
+<img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_interviewReviews.png" width="400" />
 
-![InterviewReview](/public/mockups/bootUp_mockUp_interviewReview.png "InterviewReview")
+<img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_profile.png" width="400" />
 
-![UserProfile](/public/mockups/bootUp_mockUp_profile.png "UserProfile")
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
