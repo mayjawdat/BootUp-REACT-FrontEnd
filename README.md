@@ -1,4 +1,4 @@
-(NOT)![BootUpLogo](/src/Images/BootUpLogo2.png "BootUpLogo")
+(NOT)![BootUpLogo](/src/images/BootUpLogo2.png "BootUpLogo")
 
 <img src="https://github.com/DBC-BootUp/BootUp-API/blob/development/BootUpLogo2.png" width="250" />
 
