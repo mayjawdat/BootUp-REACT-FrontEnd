@@ -6,7 +6,7 @@
 
 ![](/src/images/BootUpLogo2.png "")
 
-<img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_interviewReviews.png" width="400" /><p>          </p><img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_interviewReview.png" width="400" />
+<img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_interviewReviews.png" width="400" /><p>     </p><img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_interviewReview.png" width="400" />
 
 <img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_profile.png" width="400" />
 
