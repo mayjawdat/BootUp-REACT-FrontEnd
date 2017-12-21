@@ -1,3 +1,5 @@
+![BootUpLogo](/src/images/BootUpLogo2.png "BootUpLogo")
+
 # BootUp-REACT-FrontEnd
 
 ### BootUp [API](https://github.com/DBC-BootUp/BootUp-API/)
