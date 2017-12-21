@@ -2,6 +2,12 @@
 
 ### BootUp [API](https://github.com/DBC-BootUp/BootUp-API/)
 
+![InterviewReviews](/public/mockups/bootUp_mockUp_interviewReviews.png "InterviewReviews")
+
+![InterviewReview](/public/mockups/bootUp_mockUp_interviewReview.png "InterviewReview")
+
+![UserProfile](/public/mockups/bootUp_mockUp_profile.png "UserProfile")
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
