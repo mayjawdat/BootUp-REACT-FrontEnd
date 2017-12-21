@@ -1,10 +1,10 @@
-![](/src/images/BootUpLogo2.png "")
-
 <img src="https://github.com/DBC-BootUp/BootUp-API/blob/development/BootUpLogo2.png" width="250" />
 
 ## BootUp-REACT-FrontEnd
 
 ### BootUp [API](https://github.com/DBC-BootUp/BootUp-API/)
+
+![](/src/images/BootUpLogo2.png "")
 
 ![InterviewReviews](/public/mockups/bootUp_mockUp_interviewReviews.png "InterviewReviews")
 
