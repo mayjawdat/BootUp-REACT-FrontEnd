@@ -6,7 +6,6 @@ BootUp [Presentation](https://goo.gl/AoAowQ)
 
 ### BootUp [API](https://github.com/DBC-BootUp/BootUp-API/)
 
-
 <img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_interviewReviews.png" width="400" />     <img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_interviewReview.png" width="400" />
 
 <img src="https://github.com/DBC-BootUp/BootUp-REACT-FrontEnd/blob/development/public/mockups/bootUp_mockUp_profile.png" width="400" />
