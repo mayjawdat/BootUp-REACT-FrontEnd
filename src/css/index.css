@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+:root {
+  --header-height: 200px;
+}
+
+/* NAVBAR */
+
+.App {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: white;
+  min-height: 95px;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+  }
+}
+
+.header #logo {
+  width: 250px;
+  /* float: left; */
+  padding-left: 30px;
+}
+
+.header #links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header #links li {
+  /* float: right; */
+  display: inline-block;
+  text-align: center;
+  font-size: 1em;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.header a {
+  text-decoration: none;
+  color: #85D0D0;
+}
+
+.header a:hover {
+  color: #F58B64;
+}
+
+
+/*  HOMEPAGE */
+
+.link-button {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 1em;
+  background-color: #85D0D0;
+}
+
+#linkedin-login {
+  margin-top: 2em;
+  text-align: center;
+}
+
+#linkedin-login a {
+  text-decoration: none;
+  color: white;
+}
+
+#linkedin-login a:hover {
+  color: #FEEC9E;
+}
+
+
+/* MAIN PAGE LAYOUT */
+
+.main li, .main ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main {
+  background-image: url("../Images/banner.png");
+  background-repeat: repeat-x;
+  background-color: #f4f4f4;
+  /* background-size: 30em; */
+  background-size: auto 200px;
+  /* background-size: auto var(--header-height); */
+  border-radius: 15px;
+  padding: 0 20px 20px;
+  width: 95%;
+  min-height: var(--header-height);
+}
+
+.main p {
+  margin: 0;
+  padding: 0;
+}
+
+.main .page-header {
+  height: var(--header-height);
+  margin-bottom: 16px
+}
+
+.page-header h2 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 105px;
+}
+
+h2 {
+  color: white;
+}
+
+button {
+  width: 225px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 25px;
+}
+
+li {
+  list-style: none;
+}
+
+
+/* INDEX */
+
+.interview-list-item, .company-list-item {
+  margin-top: 18px;
+}
+
+.interview-list-item a, .company-list-item a {
+  text-decoration: none;
+}
+
+.interview-list-item a:hover, .company-list-item a:hover {
+  color: #F58B6E;
+}
+
+.list-of-interviews {
+  margin-top: 20px;
+  border-top: 1px solid #CFCFCE;
+  padding-top: 16px;
+}
+
+.interview-list li , .company-list li{
+  /*text-align: center;*/
+}
+
+.interview-list p, .company-list p {
+  margin-bottom: 12px;
+}
+
+.list-label {
+  font-weight: bold;
+}
+
+#filters {
+  text-align: center;
+}
+
+#filters button {
+  background-color: white;
+  color: #85D0D0;
+}
+
+#filters button:hover {
+  background-color: white;
+  color: #F58B6E;
+}
+
+
+/* USER PROFILE */
+
+.profile-name, .user-profile h3, .user-profile h4 {
+  color: #85D0D0;
+}
+
+.user-profile {
+  text-align: center;
+}
+
+.user-profile h2, .user-profile h3, .user-profile h4 {
+  margin: 0;
+
+}
+
+.user-profile #photo {
+  padding-top: 20px;
+  background-image: url("../Images/defaultProfile.png");
+  /* width: 400px; */
+  text-align: center;
+  background-size: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center 20px;
+}
+
+.user-profile #photo img {
+  margin: 20px auto;
+  width: 200px;
+  height: auto;
+}
+
+.user-profile #logo {
+  margin-top: none;
+  width: 50px;
+}
+
+.user-profile #add-button {
+  width: 225px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 25px;
+  background-color: #9E9D9E;
+}
+
+.profile-links {
+  margin-top: 20px;
+}
+
+.profile-interview-list {
+  margin-top:30px;
+  padding-top: 20px;
+  border-top: 1px solid gray;
+}
+
+.profile-interview-list h3 {
+  margin-bottom: 20px;
+}
+
+#add-button a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#add-button a img {
+  height: 15px;
+  width: 15px;
+}
+
+#add-button img {
+  size: 2px;
+}
+
+
+/* INTERVIEW SHOW */
+
+.interview-list span {
+  text-align: center;
+}
+
+.interview-list li {
+  /*float: left;*/
+}
+
+.interview-list h3 {
+  margin-bottom: 4px;
+}
+
+.interview-list #logo {
+  margin-top: none;
+  width: 30px;
+}
+
+
+.interview-list #logo-desc {
+  font-family: source sans pro;
+  font-size: 25px;
+}
+
+
+/* COMPANY SHOW */
+
+.company-interview-list span {
+  text-align: center;
+}
+
+.company-interview-list li {
+  /*float: left;*/
+}
+
+.company-interview-list #logo {
+  margin-top: none;
+  width: 25px;
+}
+
+.company-interview-list #logo-desc {
+  font-family: source sans pro;
+  font-size: 25px; 
+}
+
+.company-location {
+  font-size: .75em;
+}
+
+.company-filter {
+  width: 50%;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  border-radius: 5%;
+  border: none;
+  /* padding: 20px; */
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+}
+
+.footer #github-repo {
+  margin-top: 25px;
+  margin-bottom: 0;
+  width: 50px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.footer #logo {
+  margin-top: none;
+  width: 150px;
+}
+
+.link-button {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 1em;
+  background-color: #85D0D0;
+}
+
+/*a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F58B6E;
+}*/
+
+body {
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5em;
+}
+
+
+/* SEARCH */
+
+#search {
+  border-radius: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5em;
+  width: 370px;
+  height: 50px;
+  margin: 5px;
+  position: center;
+  display:inline-block;margin-right:10px;
+}
+
+#submit-button  {
+  background-color: #85D0D0;
+  margin-top: 20px;
+  margin-left: 15px;
+  width: 45px;
+  height: 50px;
+  display:inline-block;
+  cursor: pointer;
+}
+
+
+/* NEW INTERVIEW FORM */
+
+#job_title {
+  border-radius: 15px;
+  margin: 10px;
+}
+
+#company {
+  border-radius: 15px;
+  margin: 10px;
+}
+
+#easy {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#average {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#difficult {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+.mr-2 {
+  border-radius: 15px;
+  margin-left: 20px;
+}
+
+#negative {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#neutral {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#positive {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+
+#yes {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+
+#no {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#phoneScreen {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#techScreen {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#takeHomeChallenge {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#onsiteInterview {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#whiteboardChallenge {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#phone_screen_details {
+  margin-left: 15px;
+  border-radius: 15px;
+
+}
+
+label #phone_screen_details {
+  margin-left: 20px;
+}
+
+#tech_screen_details {
+    border-radius: 15px;
+    margin-left: 15px;
+}
+
+#take_home_challenge_details {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#onsite_details {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#whiteboarding_details {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#negotiation_details {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#notes {
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+.mb-4 btn btn-primary {
+  background-color: #85D0D0;
+  text-color: white;
+}
+
